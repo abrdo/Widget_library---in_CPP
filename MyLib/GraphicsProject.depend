@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1592543858 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\widget_library-cpp\mylib\checkbox.cpp
+1592545604 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\widget_library-cpp\mylib\checkbox.cpp
 	"checkbox.hpp"
 	"graphics.hpp"
 	<iostream>
@@ -13,12 +13,12 @@
 1581495986 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\widget_library-cpp\mylib\include\graphics.hpp
 	<string>
 
-1592543999 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\widget_library-cpp\mylib\main.cpp
+1592544825 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\widget_library-cpp\mylib\main.cpp
 	"checkbox.hpp"
 	"graphics.hpp"
 	<iostream>
 
-1592540276 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\widget_library-cpp\mylib\widget.cpp
+1592545771 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\widget_library-cpp\mylib\widget.cpp
 	"widget.hpp"
 	"graphics.hpp"
 	<iostream>

@@ -9,8 +9,8 @@ int main()
 {
     gout.open(400,400);
 
-    CheckBox* cb = new CheckBox(10,10,30,30);
-    //cb->show();
+    CheckBox* cb = new CheckBox(10,10,40,40);
+    cb->show();
     gout<< refresh;
     event ev;
     while(gin >> ev) {
