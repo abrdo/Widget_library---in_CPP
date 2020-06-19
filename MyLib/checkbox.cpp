@@ -27,7 +27,11 @@ void CheckBox::show(){
     if(_checked){
         gout<<color(255,255,255);
         gout<<move_to(_x+6, _y+6)<<line(_size_x-12, _size_y-12);
+        gout<<move_to(_x+5, _y+6)<<line(_size_x-13, _size_y-12);
+        gout<<move_to(_x+7, _y+6)<<line(_size_x-11, _size_y-12);
         gout<<move_to(_x+_size_x-6, _y+6)<<line(-_size_x+12, _size_y-12);
+        gout<<move_to(_x+_size_x-7, _y+6)<<line(-_size_x+11, _size_y-12);
+        gout<<move_to(_x+_size_x-5, _y+6)<<line(-_size_x+13, _size_y-12);
     }
 }
 

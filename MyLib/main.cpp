@@ -9,7 +9,7 @@ int main()
 {
     gout.open(400,400);
 
-    CheckBox* cb = new CheckBox(10,10,100,100);
+    CheckBox* cb = new CheckBox(10,10,30,30);
     //cb->show();
     gout<< refresh;
     event ev;
