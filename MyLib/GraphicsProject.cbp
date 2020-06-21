@@ -42,7 +42,15 @@
 		</Linker>
 		<Unit filename="checkbox.cpp" />
 		<Unit filename="checkbox.hpp" />
+		<Unit filename="dynamictext.cpp" />
+		<Unit filename="dynamictext.hpp" />
+		<Unit filename="iiiiiiiiiiiiiiiiiiii.cpp" />
+		<Unit filename="iiiiiiiiiiiiiiiiiiii.hpp" />
 		<Unit filename="main.cpp" />
+		<Unit filename="statictext.cpp" />
+		<Unit filename="statictext.hpp" />
+		<Unit filename="texteditor.cpp" />
+		<Unit filename="texteditor.hpp" />
 		<Unit filename="widget.cpp" />
 		<Unit filename="widget.hpp" />
 		<Extensions>
