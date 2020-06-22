@@ -191,7 +191,7 @@
 	"widget.hpp"
 	<vector>
 
-1592835864 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repo\widget_library-cpp\mylib\widget.hpp
+1592852682 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repo\widget_library-cpp\mylib\widget.hpp
 	"graphics.hpp"
 	<sstream>
 
@@ -225,15 +225,17 @@
 1592710967 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repo\widget_library-cpp\mylib\iiiiiiiiiiiiiiiiiiii.hpp
 	"widget.hpp"
 
-1592829569 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repo\widget_library-cpp\mylib\main.cpp
+1592872393 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repo\widget_library-cpp\mylib\main.cpp
 	"application.hpp"
 	"numbereditor.hpp"
 	"texteditor.hpp"
 	"statictext.hpp"
 	"checkbox.hpp"
+	"selectorlist.hpp"
 	"graphics.hpp"
 	<iostream>
 	<vector>
+	<list>
 
 1592785458 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repo\widget_library-cpp\mylib\numbereditor.hpp
 	"widget.hpp"
@@ -242,7 +244,7 @@
 	"widget.hpp"
 	"statictext.hpp"
 
-1592710593 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repo\widget_library-cpp\mylib\statictext.hpp
+1592855428 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repo\widget_library-cpp\mylib\statictext.hpp
 	"widget.hpp"
 
 1592830813 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repo\widget_library-cpp\mylib\numbereditor.cpp
@@ -253,10 +255,11 @@
 1592835827 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repo\widget_library-cpp\mylib\selector.cpp
 	"selector.hpp"
 
-1592836954 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repo\widget_library-cpp\mylib\selector.hpp
+1592846362 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repo\widget_library-cpp\mylib\selector.hpp
 	"widget.hpp"
+	<list>
 
-1592710511 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repo\widget_library-cpp\mylib\statictext.cpp
+1592852083 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repo\widget_library-cpp\mylib\statictext.cpp
 	"statictext.hpp"
 	<iostream>
 
@@ -268,4 +271,32 @@
 1592835912 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repo\widget_library-cpp\mylib\widget.cpp
 	"widget.hpp"
 	<iostream>
+
+1592867559 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repo\widget_library-cpp\mylib\selectorlist.cpp
+	"selectorlist.hpp"
+	<iostream>
+	<vector>
+	"statictext.hpp"
+
+1592871004 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repo\widget_library-cpp\mylib\selectorlist.hpp
+	"widget.hpp"
+	"statictext.hpp"
+	"scrollbar.hpp"
+	<list>
+
+1592848585 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repo\widget_library-cpp\mylib\scrollbar.cpp
+	"scrollbar.hpp"
+
+1592848433 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repo\widget_library-cpp\mylib\scrollbar.hpp
+	"widget.hpp"
+	"graphics.hpp"
+
+1592871380 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repo\widget_library-cpp\mylib\selectorlist_list.cpp
+	"selectorlist_list.hpp"
+
+1592871692 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repo\widget_library-cpp\mylib\selectorlist_list.hpp
+	"widget.hpp"
+	"statictext.hpp"
+	"scrollbar.hpp"
+	<list>
 

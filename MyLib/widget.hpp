@@ -11,6 +11,7 @@ private:
 protected:
     int _x, _y, _size_x, _size_y;
     int _fonthight;
+    unsigned char _r, _g, _b;
 
 public:
     Widget(){}
@@ -26,6 +27,8 @@ public:
 
     void show_frame();
     void focus_by_click(genv::event ev);
+
+    int get_size_y(){return _size_y;}
 
 
 };
