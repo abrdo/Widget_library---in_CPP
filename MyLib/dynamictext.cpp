@@ -1,5 +1,4 @@
 #include "dynamictext.hpp"
-#include "graphics.hpp"
 #include <iostream>
 using namespace std;
 using namespace genv;

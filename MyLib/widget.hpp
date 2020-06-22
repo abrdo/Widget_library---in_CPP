@@ -20,7 +20,7 @@ public:
     void set_focusable(bool f);
     bool is_focusable();
 
-    bool is_selected(int mouse_x, int mouse_y);
+    bool mouse_above(int mouse_x, int mouse_y);
     virtual void handle(genv::event ev);
     virtual void show() = 0;
 

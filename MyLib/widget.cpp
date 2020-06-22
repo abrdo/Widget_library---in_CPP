@@ -1,11 +1,10 @@
 #include "widget.hpp"
-#include "graphics.hpp"
 #include <iostream>
 using namespace genv;
 
 Widget::Widget(int x, int y, int sx, int sy) : _x(x), _y(y), _size_x(sx), _size_y(sy), _focused(false), _focusable(true){
-    gout.load_font("LiberationSans-Regular.ttf", 14);
-    int _fonthight = genv::gout.cascent()+genv::gout.cdescent();
+    gout.load_font("LiberationSans-Regular.ttf", 14); //size - hight in pixels : [14 - 15 px]
+    _fonthight = genv::gout.cascent()+genv::gout.cdescent();
 }
 
 void Widget::set_focused(bool f) {
@@ -22,17 +21,17 @@ bool Widget::is_focusable(){return _focusable;}
 
 
 
-bool Widget::is_selected(int mx, int my){ //is_mouse_above
+bool Widget::mouse_above(int mx, int my){
     return _x<=mx && mx<=(_x+_size_x) && _y<=my && my<_y+_size_y;
 }
 
 void Widget::handle(event ev){}
 
 void Widget::focus_by_click(event ev){
-    if(ev.button == btn_left && is_selected(ev.pos_x, ev.pos_y)){
+    if(ev.button == btn_left && mouse_above(ev.pos_x, ev.pos_y)){
         set_focused(true);
     }
-    if(ev.button == btn_left && !is_selected(ev.pos_x, ev.pos_y)){
+    if(ev.button == btn_left && !mouse_above(ev.pos_x, ev.pos_y)){
         set_focused(false);
     }
 }

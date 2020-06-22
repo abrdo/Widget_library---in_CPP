@@ -2,7 +2,6 @@
 #define DYNAMICTEXT_HPP
 
 #include "widget.hpp"
-#include "graphics.hpp"
 
 class DynamicText : public Widget{
     std::string _text;

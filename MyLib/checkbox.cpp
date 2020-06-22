@@ -1,5 +1,4 @@
 #include "checkbox.hpp"
-#include "graphics.hpp"
 #include <iostream>
 using namespace std;
 using namespace genv;
@@ -26,11 +25,11 @@ void CheckBox::show(){
     if(_checked){
         if(!is_focusable()) gout<<color(130,130,130);
         else gout<<color(255,255,255);
-        gout<<move_to(_x+6, _y+6)<<line(_size_x-12, _size_y-12);
-        gout<<move_to(_x+5, _y+6)<<line(_size_x-12, _size_y-12);
-        gout<<move_to(_x+7, _y+6)<<line(_size_x-12, _size_y-12);
-        gout<<move_to(_x+_size_x-6, _y+6)<<line(-_size_x+12, _size_y-12);
-        gout<<move_to(_x+_size_x-7, _y+6)<<line(-_size_x+12, _size_y-12);
-        gout<<move_to(_x+_size_x-5, _y+6)<<line(-_size_x+12, _size_y-12);
+        gout<<move_to(_x+4, _y+5)<<line(_size_x-9, _size_y-9);
+        gout<<move_to(_x+5, _y+5)<<line(_size_x-9, _size_y-9);
+        gout<<move_to(_x+6, _y+5)<<line(_size_x-9, _size_y-9);
+        gout<<move_to(_x+_size_x-4, _y+5)<<line(-_size_x+9, _size_y-9);
+        gout<<move_to(_x+_size_x-5, _y+5)<<line(-_size_x+9, _size_y-9);
+        gout<<move_to(_x+_size_x-6, _y+5)<<line(-_size_x+9, _size_y-9);
     }
 }

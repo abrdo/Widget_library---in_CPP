@@ -40,6 +40,10 @@
 			<Add library="lib/libSDLmain.a" />
 			<Add directory="lib" />
 		</Linker>
+		<Unit filename="application.cpp" />
+		<Unit filename="application.hpp" />
+		<Unit filename="button.cpp" />
+		<Unit filename="button.hpp" />
 		<Unit filename="checkbox.cpp" />
 		<Unit filename="checkbox.hpp" />
 		<Unit filename="dynamictext.cpp" />
@@ -47,6 +51,10 @@
 		<Unit filename="iiiiiiiiiiiiiiiiiiii.cpp" />
 		<Unit filename="iiiiiiiiiiiiiiiiiiii.hpp" />
 		<Unit filename="main.cpp" />
+		<Unit filename="numbereditor.cpp" />
+		<Unit filename="numbereditor.hpp" />
+		<Unit filename="selector.cpp" />
+		<Unit filename="selector.hpp" />
 		<Unit filename="statictext.cpp" />
 		<Unit filename="statictext.hpp" />
 		<Unit filename="texteditor.cpp" />

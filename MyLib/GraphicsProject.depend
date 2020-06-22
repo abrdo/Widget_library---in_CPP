@@ -23,79 +23,249 @@
 	"graphics.hpp"
 	<iostream>
 
-1592696637 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\widget_library-cpp\mylib\checkbox.cpp
+1592825459 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\widget_library-cpp\mylib\checkbox.cpp
 	"checkbox.hpp"
-	"graphics.hpp"
 	<iostream>
 
 1592696637 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\widget_library-cpp\mylib\checkbox.hpp
 	"widget.hpp"
 
-1592704397 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\widget_library-cpp\mylib\widget.hpp
+1592835864 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\widget_library-cpp\mylib\widget.hpp
 	"graphics.hpp"
 	<sstream>
 
 1581495986 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\widget_library-cpp\mylib\include\graphics.hpp
 	<string>
 
-1592700021 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\widget_library-cpp\mylib\main.cpp
-	"checkbox.hpp"
-	"statictext.hpp"
-	"texteditor.hpp"
+1592829569 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\widget_library-cpp\mylib\main.cpp
+	"application.hpp"
 	"numbereditor.hpp"
+	"texteditor.hpp"
+	"statictext.hpp"
+	"checkbox.hpp"
 	"graphics.hpp"
 	<iostream>
 	<vector>
 
-1592690909 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\widget_library-cpp\mylib\widget.cpp
+1592835912 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\widget_library-cpp\mylib\widget.cpp
 	"widget.hpp"
-	"graphics.hpp"
 	<iostream>
 
-1592700962 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\widget_library-cpp\mylib\statictext.cpp
+1592710511 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\widget_library-cpp\mylib\statictext.cpp
 	"statictext.hpp"
 	<iostream>
-	"graphics.hpp"
 
-1592696637 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\widget_library-cpp\mylib\statictext.hpp
+1592710593 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\widget_library-cpp\mylib\statictext.hpp
 	"widget.hpp"
 
-1592700641 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\widget_library-cpp\mylib\texteditor.cpp
+1592829275 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\widget_library-cpp\mylib\texteditor.cpp
 	"texteditor.hpp"
-	"graphics.hpp"
 	<iostream>
 	<ctime>
 
-1592696702 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\widget_library-cpp\mylib\texteditor.hpp
+1592829618 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\widget_library-cpp\mylib\texteditor.hpp
 	"widget.hpp"
-	"graphics.hpp"
 	"statictext.hpp"
 
-1592696669 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\widget_library-cpp\mylib\iiiiiiiiiiiiiiiiiiii.cpp
+1592710778 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\widget_library-cpp\mylib\iiiiiiiiiiiiiiiiiiii.cpp
 	"iiiiiiiiiiiiiiiiiiii.hpp"
-	"graphics.hpp"
 	<iostream>
 
-1592696653 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\widget_library-cpp\mylib\iiiiiiiiiiiiiiiiiiii.hpp
+1592710967 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\widget_library-cpp\mylib\iiiiiiiiiiiiiiiiiiii.hpp
 	"widget.hpp"
-	"graphics.hpp"
 
-1592696665 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\widget_library-cpp\mylib\dynamictext.cpp
+1592710778 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\widget_library-cpp\mylib\dynamictext.cpp
 	"dynamictext.hpp"
-	"graphics.hpp"
 	<iostream>
 
-1592696646 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\widget_library-cpp\mylib\dynamictext.hpp
+1592710967 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\widget_library-cpp\mylib\dynamictext.hpp
 	"widget.hpp"
-	"graphics.hpp"
 
-1592706788 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\widget_library-cpp\mylib\numbereditor.cpp
+1592830813 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\widget_library-cpp\mylib\numbereditor.cpp
 	"numbereditor.hpp"
-	"graphics.hpp"
 	<iostream>
 	<ctime>
 
-1592701012 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\widget_library-cpp\mylib\numbereditor.hpp
+1592785458 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\widget_library-cpp\mylib\numbereditor.hpp
 	"widget.hpp"
+
+1592787261 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\widget_library-cpp\mylib\application.cpp
+	"application.hpp"
+	<iostream>
+
+1592787117 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\widget_library-cpp\mylib\application.hpp
+	"widget.hpp"
+	<vector>
+
+1592835827 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\widget_library-cpp\mylib\selector.cpp
+	"selector.hpp"
+
+1592836954 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\widget_library-cpp\mylib\selector.hpp
+	"widget.hpp"
+
+1592787261 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\mylib másolata\application.cpp
+	"application.hpp"
+	<iostream>
+
+1592787117 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\mylib másolata\application.hpp
+	"widget.hpp"
+	<vector>
+
+1592835864 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\mylib másolata\widget.hpp
 	"graphics.hpp"
+	<sstream>
+
+1581495986 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\mylib másolata\include\graphics.hpp
+	<string>
+
+1592825459 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\mylib másolata\checkbox.cpp
+	"checkbox.hpp"
+	<iostream>
+
+1592696637 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\mylib másolata\checkbox.hpp
+	"widget.hpp"
+
+1592710778 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\mylib másolata\dynamictext.cpp
+	"dynamictext.hpp"
+	<iostream>
+
+1592710967 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\mylib másolata\dynamictext.hpp
+	"widget.hpp"
+
+1592710778 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\mylib másolata\iiiiiiiiiiiiiiiiiiii.cpp
+	"iiiiiiiiiiiiiiiiiiii.hpp"
+	<iostream>
+
+1592710967 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\mylib másolata\iiiiiiiiiiiiiiiiiiii.hpp
+	"widget.hpp"
+
+1592829569 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\mylib másolata\main.cpp
+	"application.hpp"
+	"numbereditor.hpp"
+	"texteditor.hpp"
+	"statictext.hpp"
+	"checkbox.hpp"
+	"graphics.hpp"
+	<iostream>
+	<vector>
+
+1592785458 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\mylib másolata\numbereditor.hpp
+	"widget.hpp"
+
+1592829618 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\mylib másolata\texteditor.hpp
+	"widget.hpp"
+	"statictext.hpp"
+
+1592710593 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\mylib másolata\statictext.hpp
+	"widget.hpp"
+
+1592830813 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\mylib másolata\numbereditor.cpp
+	"numbereditor.hpp"
+	<iostream>
+	<ctime>
+
+1592710511 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\mylib másolata\statictext.cpp
+	"statictext.hpp"
+	<iostream>
+
+1592829275 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\mylib másolata\texteditor.cpp
+	"texteditor.hpp"
+	<iostream>
+	<ctime>
+
+1592835912 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\mylib másolata\widget.cpp
+	"widget.hpp"
+	<iostream>
+
+1592835827 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\mylib másolata\selector.cpp
+	"selector.hpp"
+
+1592836954 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repos\mylib másolata\selector.hpp
+	"widget.hpp"
+
+1592787261 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repo\widget_library-cpp\mylib\application.cpp
+	"application.hpp"
+	<iostream>
+
+1592787117 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repo\widget_library-cpp\mylib\application.hpp
+	"widget.hpp"
+	<vector>
+
+1592835864 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repo\widget_library-cpp\mylib\widget.hpp
+	"graphics.hpp"
+	<sstream>
+
+1581495986 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repo\widget_library-cpp\mylib\include\graphics.hpp
+	<string>
+
+1592839334 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repo\widget_library-cpp\mylib\button.cpp
+	"button.hpp"
+
+1592839334 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repo\widget_library-cpp\mylib\button.hpp
+	"widget.hpp"
+
+1592825459 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repo\widget_library-cpp\mylib\checkbox.cpp
+	"checkbox.hpp"
+	<iostream>
+
+1592696637 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repo\widget_library-cpp\mylib\checkbox.hpp
+	"widget.hpp"
+
+1592710778 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repo\widget_library-cpp\mylib\dynamictext.cpp
+	"dynamictext.hpp"
+	<iostream>
+
+1592710967 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repo\widget_library-cpp\mylib\dynamictext.hpp
+	"widget.hpp"
+
+1592710778 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repo\widget_library-cpp\mylib\iiiiiiiiiiiiiiiiiiii.cpp
+	"iiiiiiiiiiiiiiiiiiii.hpp"
+	<iostream>
+
+1592710967 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repo\widget_library-cpp\mylib\iiiiiiiiiiiiiiiiiiii.hpp
+	"widget.hpp"
+
+1592829569 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repo\widget_library-cpp\mylib\main.cpp
+	"application.hpp"
+	"numbereditor.hpp"
+	"texteditor.hpp"
+	"statictext.hpp"
+	"checkbox.hpp"
+	"graphics.hpp"
+	<iostream>
+	<vector>
+
+1592785458 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repo\widget_library-cpp\mylib\numbereditor.hpp
+	"widget.hpp"
+
+1592829618 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repo\widget_library-cpp\mylib\texteditor.hpp
+	"widget.hpp"
+	"statictext.hpp"
+
+1592710593 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repo\widget_library-cpp\mylib\statictext.hpp
+	"widget.hpp"
+
+1592830813 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repo\widget_library-cpp\mylib\numbereditor.cpp
+	"numbereditor.hpp"
+	<iostream>
+	<ctime>
+
+1592835827 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repo\widget_library-cpp\mylib\selector.cpp
+	"selector.hpp"
+
+1592836954 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repo\widget_library-cpp\mylib\selector.hpp
+	"widget.hpp"
+
+1592710511 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repo\widget_library-cpp\mylib\statictext.cpp
+	"statictext.hpp"
+	<iostream>
+
+1592829275 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repo\widget_library-cpp\mylib\texteditor.cpp
+	"texteditor.hpp"
+	<iostream>
+	<ctime>
+
+1592835912 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandók\lib_repo\widget_library-cpp\mylib\widget.cpp
+	"widget.hpp"
+	<iostream>
 
