@@ -12,6 +12,6 @@ void IIIIIIIIIIIIIIIIIIII::handle(event ev){
 
 }
 
-void IIIIIIIIIIIIIIIIIIII::show(){
+void IIIIIIIIIIIIIIIIIIII::show(genv::canvas &c){
 
 }

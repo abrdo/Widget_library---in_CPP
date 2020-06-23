@@ -7,63 +7,103 @@ using namespace std;
 using namespace genv;
 
 SelectorList::SelectorList(int x, int y, int sx, int sy) : Widget(x,y,sx,sy){
-    _scrollbar = new ScrollBar(_size_x, _y, 5, _size_y);
     _items = {};
-    _selected_it = _items.begin();
-    std::list<StaticText>::iterator a = _items.end()--;
-    //_selected_it = a;
-    //_selected_it--;
+    _selected_index = -1;
+    _leading = _fonthight+2;
+    _scroll_shift = 0;
 }
 
 SelectorList::~SelectorList(){
-    delete _scrollbar;
+    for(auto item : _items)
+        delete item;
 }
 
 void SelectorList::new_item(string itemtext){
-    int y = _y+5 + _items.size()*(_fonthight + 3);
-    _items.push_back(StaticText(_x+5, y, itemtext));
-    _selected_it = _items.end();
+    int y = 5 + _items.size()*_leading;
+    _items.push_back(new StaticText(5, y, itemtext, 150,150,150));
 }
 
 void SelectorList::delete_selected(){
-    if(_selected_it!=_items.end()){
-        for(list<StaticText>::iterator it = _selected_it; it!=_items.end(); it++){
-
+    if(_selected_index != -1){
+        // modification of _y coordinates:
+        for(int i = _items.size()-1; _selected_index < i; i--){
+            _items[i]->set_y(_items[i-1]->get_y());
         }
-        _items.erase(_selected_it);
-        _selected_it = _items.end();
-
+        //deletion:
+        delete _items[_selected_index];
+        _items[_selected_index] = 0;
+        for(int i = _selected_index; i<_items.size()-1; i++){
+            _items[i]= _items[i+1];
+        }
+        _items.resize(_items.size()-1);
+        _selected_index = -1;
     }
+    else cerr<<"warning: Can't delete, because there is no selection from the SelectorList."<<endl;
 
 }
-
-
-
-
-
 
 void SelectorList::handle(event ev){
     focus_by_click(ev);
+
+    if(is_focused()){
+        if(ev.keycode == key_delete){
+            if(_selected_index != -1) delete_selected();
+        }
+    }
+
+    if(focusing_click(ev)){
+        if(ev.pos_x<_x+_size_x-22){
+            int new_sel_ind = (ev.pos_y + _scroll_shift -_y-5)/_leading;
+            if(new_sel_ind < _items.size()) _selected_index = new_sel_ind;
+        }else if(ev.pos_y < _y+22){
+            _scroll_shift-=20;
+        }else if(ev.pos_y > _y+_size_y-22){
+            _scroll_shift+=20;
+        }
+    }
+    if(is_focused() && ev.keycode== key_up) _selected_index--;
+    if(is_focused() && ev.keycode== key_down) _selected_index++;
+
+
+    if(_scroll_shift < 0)
+        _scroll_shift = 0;
+    else if(_scroll_shift > _items.size()*_leading+10 - _size_y)
+        _scroll_shift = _items.size()*_leading+10 - _size_y;
+    if(_selected_index < -1)
+        _selected_index = 0;
+    else if(_selected_index > _items.size()-1)
+        _selected_index = _items.size()-1;
+
 }
 
-void SelectorList::show(){
+
+
+void SelectorList::show(genv::canvas &c){
+    canvas canv;
+    canv.open(_size_x+1, 5+_items.size()*_leading+1);
+    canv.load_font(__fontfile, __fontsize);
+
+    //SELECT:
+    if(_selected_index != -1){
+        canv<<color(255,255,0)
+            <<move_to(4, 5 + _selected_index*(_leading))<<box(_size_x-8, _leading);
+    }
+    //LIST:
+    if(_selected_index != -1) _items[_selected_index]->set_rgb(90,90,90);
+    for(auto item : _items){
+        item->show(canv);
+    }
+    if(_selected_index != -1) _items[_selected_index]->set_rgb(150,150,150);
+
+    c<<stamp(canv, 0, 0+_scroll_shift, _size_x, _size_y, _x, _y);
+
+    //ScrollBar
+    c<<color(150,150,150);
+    c<<move_to(_x+_size_x-2, _y+2)<<box(-20, (_size_y-4));
+    c<<color(100,100,100);
+    c<<move_to(_x+_size_x-2, _y+2)<<box(-20,20);
+    c<<move_to(_x+_size_x-2, _y+_size_y-2)<<box(-20,-20);
+
+    //Frame
     show_frame();
-
-    for(StaticText item: _items){
-        item.show();
-    }
-
-/*
-    int ys = _y+5;
-    for(list<string>::iterator it = _items.begin(); it!=_items.end(); it++){
-        StaticText* itemS = new StaticText(_x+5, ys, *it);
-        ys += itemS->get_size_y() + 3;
-
-        itemS->show();
-        delete itemS;
-        //itemsS.push_back(itemS);
-    }
-*/
-
-
 }

@@ -74,26 +74,26 @@ void NumberEditor::handle(event ev){
     //======================================= Increase / Decrease END ======================================================
 }
 
-void NumberEditor::show(){
+void NumberEditor::show(genv::canvas &c){
     Widget::show_frame();
     // buttons show
     int tx = _x+ _size_x, ty = _y+ _size_y;
-    gout<<color(255,255,255)<<move_to(tx-15, _y+2)<<box(13, _size_y - 4); //buttons white background - grid
-    gout<<color(100,100,100);
-    gout<<move_to(tx-14, _y+2)<<box(12,(_size_y+1)/2-3); //buttons
-    gout<<move_to(tx-14, ty-3)<<box(12,-((_size_y+1)/2-3));
-    gout<<color(255,255,255);
-    gout<<move_to(tx-8,_y+5)<<line(3,4); //top triangle
-    gout<<move_to(tx-8,_y+5)<<line(-3,4);
-    gout<<move_to(tx-11,_y+9)<<line(7,0);
-    gout<<move_to(tx-8,ty-5)<<line(3,-4); //down triangle
-    gout<<move_to(tx-8,ty-5)<<line(-3,-4);
-    gout<<move_to(tx-11,ty-9)<<line(7,0);
+    c<<color(255,255,255)<<move_to(tx-15, _y+2)<<box(13, _size_y - 4); //buttons white background - grid
+    c<<color(100,100,100);
+    c<<move_to(tx-14, _y+2)<<box(12,(_size_y+1)/2-3); //buttons
+    c<<move_to(tx-14, ty-3)<<box(12,-((_size_y+1)/2-3));
+    c<<color(255,255,255);
+    c<<move_to(tx-8,_y+5)<<line(3,4); //top triangle
+    c<<move_to(tx-8,_y+5)<<line(-3,4);
+    c<<move_to(tx-11,_y+9)<<line(7,0);
+    c<<move_to(tx-8,ty-5)<<line(3,-4); //down triangle
+    c<<move_to(tx-8,ty-5)<<line(-3,-4);
+    c<<move_to(tx-11,ty-9)<<line(7,0);
 
     // number show
     if(_snum!="")
-        gout<<move_to(_x+3, _y+3)<<color(255,255,255)<<text(_snum); //text
-    else gout<<move_to(_x+3, _y+3)<<color(255,255,255);
+        c<<move_to(_x+3, _y+3)<<color(255,255,255)<<text(_snum); //text
+    else c<<move_to(_x+3, _y+3)<<color(255,255,255);
     if(is_focused() && _cursor_visible)
-        gout<<text("|");
+        c<<text("|");
 }

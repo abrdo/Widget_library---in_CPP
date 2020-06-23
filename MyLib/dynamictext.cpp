@@ -26,8 +26,8 @@ void DynamicText::handle(event ev){
         }
 */
 
-void DynamicText::show(){
+void DynamicText::show(genv::canvas &c){
     Widget::show_frame();
-    gout<<move_to(_x + 10, _y +30)<<color(255,255,255)<<text(_text);
+    c<<move_to(_x + 10, _y +30)<<color(255,255,255)<<text(_text);
 
 }

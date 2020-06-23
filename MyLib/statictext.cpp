@@ -12,8 +12,8 @@ StaticText::StaticText(int x, int y, string text, unsigned char r, unsigned char
     cout<<"font y size: "<<_size_y<<endl;
 }
 
-void StaticText::show(){
-    gout<<move_to(_x,_y)<<color(_r,_g,_b)<<text(_text);
+void StaticText::show(genv::canvas &c){
+    c<<move_to(_x,_y)<<color(_r,_g,_b)<<text(_text);
 
 }
 

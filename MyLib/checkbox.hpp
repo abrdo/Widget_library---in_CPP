@@ -13,7 +13,7 @@ public:
     void set_checked(bool ch);
     void toggle();
     void handle(genv::event ev) override;
-    void show() override;
+    void show(genv::canvas &c = genv::gout) override;
 
 
 };

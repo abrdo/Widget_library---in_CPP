@@ -3,32 +3,31 @@
 
 #include "widget.hpp"
 #include "statictext.hpp"
-#include "scrollbar.hpp"
-#include <list>
+#include <vector>
 
 
 
 class SelectorList : public Widget{
-    std::list<StaticText> _items;
-    std::list<StaticText>::iterator _selected_it;
-    ScrollBar* _scrollbar;
+    std::vector<StaticText*> _items;
+    int _selected_index;
+    int _leading;
+    int _scroll_shift;
 
 
 public:
     SelectorList(int x, int y, int sx, int sy);
     ~SelectorList();
+    std::string get_selected(){if(_selected_index!=-1) return _items[_selected_index]->_text; else return "ERR";}
 
     void new_item(std::string itemtext);
     void delete_selected();
 
     void handle(genv::event ev) override;
-    void show() override;
+    void show(genv::canvas &c = genv::gout) override;
 
-    //DEBUG:
-    std::string get_selected_text(){
-        if(_selected_it == _items.end()) return "Helllo";
-        return _selected_it->_text;
-    }
+
+    bool selection(){return _selected_index != -1;}
+    int disp_items_size(){return _items.size()*_leading;};
 };
 
 #endif // SELECTORLIST_HPP

@@ -24,13 +24,13 @@ void TextEditor::handle(event ev){
 
 }
 
-void TextEditor::show(){
+void TextEditor::show(genv::canvas &c){
     Widget::show_frame();
     if(_text!="")
-        gout<<move_to(_x+3, _y+_size_y/2-_fonthight/2)<<color(255,255,255)<<text(_text);
-    else gout<<move_to(_x+3, _y+3)<<color(255,255,255);
+        c<<move_to(_x+3, _y+_size_y/2-_fonthight/2)<<color(255,255,255)<<text(_text);
+    else c<<move_to(_x+3, _y+3)<<color(255,255,255);
     if(is_focused() && _cursor_visible)
-        gout<<text("|");
+        c<<text("|");
     if(_text == "" && is_focusable())
         _text_if_empty.show();
 

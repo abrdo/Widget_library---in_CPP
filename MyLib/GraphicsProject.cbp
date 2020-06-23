@@ -42,12 +42,12 @@
 		</Linker>
 		<Unit filename="application.cpp" />
 		<Unit filename="application.hpp" />
-		<Unit filename="button.cpp" />
-		<Unit filename="button.hpp" />
 		<Unit filename="checkbox.cpp" />
 		<Unit filename="checkbox.hpp" />
 		<Unit filename="dynamictext.cpp" />
 		<Unit filename="dynamictext.hpp" />
+		<Unit filename="funcbutton.cpp" />
+		<Unit filename="funcbutton.hpp" />
 		<Unit filename="iiiiiiiiiiiiiiiiiiii.cpp" />
 		<Unit filename="iiiiiiiiiiiiiiiiiiii.hpp" />
 		<Unit filename="main.cpp" />

@@ -8,7 +8,7 @@ class DynamicText : public Widget{
 public:
     DynamicText(int x, int y, int sx, int sy);
     void handle(genv::event ev) override;
-    void show() override;
+    void show(genv::canvas &c = genv::gout) override;
 };
 
 #endif // DYNAMICTEXT_HPP

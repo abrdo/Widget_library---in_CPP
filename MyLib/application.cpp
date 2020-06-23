@@ -24,11 +24,24 @@ void Application::event_loop(int timer){
     while(gin >> ev && ev.keycode != key_escape){
         if(ev.keycode == key_tab && _widgets.size()!=0){
             int prev_focused;
-            if (_focused != -1){
+            /*if (_focused != -1){
                 _widgets[_focused]->set_focused(false);
                 prev_focused = _focused;
-            }
-            else prev_focused = _widgets.size()-1;
+            }*/
+            //else {
+                for(int i = 0; i<_widgets.size(); i++){
+                    if(_widgets[i]->is_focused()){
+                        _widgets[i]->set_focused(false);
+                        prev_focused = i;
+                        break;
+                    }
+                    if(i == _widgets.size()-1){
+                        prev_focused = _widgets.size()-1;
+                    }
+                }
+                _focused = prev_focused;
+                cout<<"prev focused: "<<prev_focused<<endl;;
+            //}
             int i = 0;
             while(1){
                 //cout<<i;

@@ -8,4 +8,4 @@ ScrollBar::ScrollBar(int x, int y, int sx, int sy) : Widget(x,y,sx,sy){
 
 void ScrollBar::handle(event ev){}
 
-void ScrollBar::show(){}
+void ScrollBar::show(genv::canvas &c){}
