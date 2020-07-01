@@ -22,7 +22,6 @@ bool Widget::is_focusable(){return _focusable;}
 
 
 
-
 bool Widget::mouse_above(event ev){
     if(ev.type != ev_mouse) return false;
     int mx = ev.pos_x;
@@ -31,7 +30,7 @@ bool Widget::mouse_above(event ev){
 }
 
 bool Widget::focusing_click(event ev){
-    return is_focusable() &&mouse_above(ev) && ev.button == btn_left;
+    return is_focusable() && mouse_above(ev) && ev.button == btn_left;
 }
 
 void Widget::focus_by_click(event ev){

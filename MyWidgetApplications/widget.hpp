@@ -4,6 +4,7 @@
 #include "graphics.hpp"
 #include <sstream>
 
+
 class Widget{
 private:
     bool _focused;
@@ -18,6 +19,7 @@ protected:
 public:
     Widget(){}
     Widget(int x, int y, int sx, int sy);
+    virtual ~Widget(){}
 
     int get_x(){return _x;}
     void set_x(int x){_x = x;}
@@ -47,7 +49,7 @@ public:
 
 
 
-    std::string to_str(int i){
+    static std::string to_str(int i){
         std::stringstream ss;
         ss<<i;
         std::string s;
@@ -55,7 +57,7 @@ public:
         return s;
     }
 
-    int to_int(std::string s){
+    static int to_int(std::string s){
         std::stringstream ss;
         ss<<s;
         int i;

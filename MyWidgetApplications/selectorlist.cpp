@@ -20,7 +20,7 @@ SelectorList::~SelectorList(){
 
 void SelectorList::new_item(string itemtext){
     int y = 5 + _items.size()*_leading;
-    _items.push_back(new StaticText(5, y, itemtext, 150,150,150));
+    _items.push_back(new StaticText(5, y, itemtext, 200,200,200));
 }
 
 void SelectorList::delete_selected(){
@@ -61,11 +61,15 @@ void SelectorList::handle(event ev){
             _scroll_shift+=20;
         }
     }
-    if(is_focused() && ev.keycode== key_up) _selected_index--;
-    if(is_focused() && ev.keycode== key_down) _selected_index++;
+    if(is_focused() && ev.keycode== key_up)
+        _selected_index--;
+    if(is_focused() && ev.keycode== key_down)
+        _selected_index++;
 
-
-    if(_scroll_shift < 0)
+    // _scroll_shift, _selected_index adjust, if it became invalid:
+    if(_items.size()*_leading+10 < _size_y) // the length of the displayed list is shorter then the _size_y
+        _scroll_shift = 0;
+    else if(_scroll_shift < 0)
         _scroll_shift = 0;
     else if(_scroll_shift > _items.size()*_leading+10 - _size_y)
         _scroll_shift = _items.size()*_leading+10 - _size_y;
@@ -89,11 +93,11 @@ void SelectorList::show(genv::canvas &c){
             <<move_to(4, 5 + _selected_index*(_leading))<<box(_size_x-8, _leading);
     }
     //LIST:
-    if(_selected_index != -1) _items[_selected_index]->set_rgb(90,90,90);
+    if(_selected_index != -1) _items[_selected_index]->set_rgb(70,70,70);
     for(auto item : _items){
         item->show(canv);
     }
-    if(_selected_index != -1) _items[_selected_index]->set_rgb(150,150,150);
+    if(_selected_index != -1) _items[_selected_index]->set_rgb(200,200,200);
 
     c<<stamp(canv, 0, 0+_scroll_shift, _size_x, _size_y, _x, _y);
 

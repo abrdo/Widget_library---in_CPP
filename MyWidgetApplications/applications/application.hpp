@@ -1,7 +1,7 @@
 #ifndef APPLICATION_HPP
 #define APPLICATION_HPP
 
-#include "widget.hpp"
+#include "../widget.hpp"
 #include <vector>
 
 
@@ -14,10 +14,12 @@ protected:
     int _focused; // index of focused widget;
 public:
     Application(int window_size_x, int window_size_y);
-    ~Application();
-    void new_widget(Widget* w);
-    void event_loop(int timer);
-    virtual void run(int timer = 40) = 0;
+    virtual ~Application();
+
+    void iterate_focused_by_tab(genv::event ev);
+    void handle__iterate_focused_by_tab__show(genv::event ev);
+
+    virtual void run(int timer = 40);
 };
 
 #endif // APPLICATION_HPP

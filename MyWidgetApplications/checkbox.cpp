@@ -18,6 +18,7 @@ void CheckBox::handle(event ev){
     if(Widget::focusing_click(ev)
        || (is_focused() && (ev.keycode == key_enter || ev.keycode == ' '))
        )
+
         CheckBox::toggle();
 }
 

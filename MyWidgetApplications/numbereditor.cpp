@@ -7,7 +7,7 @@ using namespace genv;
 NumberEditor::NumberEditor(int x, int y, bool p_isbounded, int lb, int ub) : Widget(x,y,0,25), _is_bounded(p_isbounded), _lbound(lb), _ubound(ub), _snum("0"){
     if(_ubound < _lbound){
         cerr<<"ERROR: The lower bound must be smaller than the upper bound by the bounded NumberEditor."<<endl;
-        exit(1);
+        //exit(1);
     }
     _size_x = gout.twidth(to_str(max(_lbound, _ubound))+"|")+25; // 25 = 18 + ...
 }

@@ -9,7 +9,7 @@ class CheckBox : public Widget
 private:
     bool _checked;
 public:
-    CheckBox(int x, int y, int sx, int sy);
+    CheckBox(int x, int y, int sx = 25, int sy = 25);
     void set_checked(bool ch);
     void toggle();
     void handle(genv::event ev) override;

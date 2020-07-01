@@ -1,0 +1,667 @@
+# depslib dependency file v1.0
+1593100223 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\www graphicskit másolata\main.cpp
+	"graphics.hpp"
+	<iostream>
+
+1581495986 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\www graphicskit másolata\include\graphics.hpp
+	<string>
+
+1593106777 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\vizsga\vizsga beadott - kraftol\main.cpp
+	"application.hpp"
+	"numbereditor.hpp"
+	"texteditor.hpp"
+	"statictext.hpp"
+	"checkbox.hpp"
+	"selectorlist.hpp"
+	"funcbutton.hpp"
+	"graphics.hpp"
+	<iostream>
+	<vector>
+	<map>
+
+1592951472 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\vizsga\vizsga beadott - kraftol\application.hpp
+	"widget.hpp"
+	<vector>
+
+1593105846 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\vizsga\vizsga beadott - kraftol\widget.hpp
+	"graphics.hpp"
+	<sstream>
+
+1581495986 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\vizsga\vizsga beadott - kraftol\include\graphics.hpp
+	<string>
+
+1592951486 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\vizsga\vizsga beadott - kraftol\numbereditor.hpp
+	"widget.hpp"
+
+1592951486 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\vizsga\vizsga beadott - kraftol\texteditor.hpp
+	"widget.hpp"
+	"statictext.hpp"
+
+1592951486 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\vizsga\vizsga beadott - kraftol\statictext.hpp
+	"widget.hpp"
+
+1592951486 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\vizsga\vizsga beadott - kraftol\checkbox.hpp
+	"widget.hpp"
+
+1592951486 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\vizsga\vizsga beadott - kraftol\selectorlist.hpp
+	"widget.hpp"
+	"statictext.hpp"
+	<vector>
+
+1592987667 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\vizsga\vizsga beadott - kraftol\funcbutton.hpp
+	"widget.hpp"
+	<functional>
+
+1592951486 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\vizsga\vizsga beadott - kraftol\application.cpp
+	"application.hpp"
+	<iostream>
+
+1592951486 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\vizsga\vizsga beadott - kraftol\checkbox.cpp
+	"checkbox.hpp"
+	<iostream>
+
+1593103500 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\vizsga\vizsga beadott - kraftol\funcbutton.cpp
+	"graphics.hpp"
+	"funcbutton.hpp"
+	<iostream>
+
+1592987728 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\vizsga\vizsga beadott - kraftol\numbereditor.cpp
+	"numbereditor.hpp"
+	<iostream>
+	<ctime>
+
+1593105791 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\vizsga\vizsga beadott - kraftol\selectorlist.cpp
+	"selectorlist.hpp"
+	<iostream>
+	<vector>
+	"statictext.hpp"
+
+1592951487 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\vizsga\vizsga beadott - kraftol\statictext.cpp
+	"statictext.hpp"
+	<iostream>
+
+1592951487 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\vizsga\vizsga beadott - kraftol\texteditor.cpp
+	"texteditor.hpp"
+	<iostream>
+	<ctime>
+
+1593106680 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\vizsga\vizsga beadott - kraftol\widget.cpp
+	"widget.hpp"
+	<iostream>
+
+1593276865 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandok, vizsga\vizsga\craftingapp\application.cpp
+	"application.hpp"
+	<iostream>
+
+1593276865 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandok, vizsga\vizsga\craftingapp\application.hpp
+	"widget.hpp"
+	<vector>
+
+1593253102 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandok, vizsga\vizsga\craftingapp\widget.hpp
+	"graphics.hpp"
+	<sstream>
+
+1581495986 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandok, vizsga\vizsga\craftingapp\include\graphics.hpp
+	<string>
+
+1593254024 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandok, vizsga\vizsga\craftingapp\checkbox.cpp
+	"checkbox.hpp"
+	<iostream>
+
+1593299153 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandok, vizsga\vizsga\craftingapp\checkbox.hpp
+	"widget.hpp"
+
+1593261980 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandok, vizsga\vizsga\craftingapp\funcbutton.cpp
+	"graphics.hpp"
+	"funcbutton.hpp"
+	<iostream>
+
+1592987667 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandok, vizsga\vizsga\craftingapp\funcbutton.hpp
+	"widget.hpp"
+	<functional>
+
+1592987728 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandok, vizsga\vizsga\craftingapp\numbereditor.cpp
+	"numbereditor.hpp"
+	<iostream>
+	<ctime>
+
+1592951486 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandok, vizsga\vizsga\craftingapp\numbereditor.hpp
+	"widget.hpp"
+
+1593105791 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandok, vizsga\vizsga\craftingapp\selectorlist.cpp
+	"selectorlist.hpp"
+	<iostream>
+	<vector>
+	"statictext.hpp"
+
+1592951486 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandok, vizsga\vizsga\craftingapp\selectorlist.hpp
+	"widget.hpp"
+	"statictext.hpp"
+	<vector>
+
+1592951486 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandok, vizsga\vizsga\craftingapp\statictext.hpp
+	"widget.hpp"
+
+1592951487 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandok, vizsga\vizsga\craftingapp\statictext.cpp
+	"statictext.hpp"
+	<iostream>
+
+1592951487 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandok, vizsga\vizsga\craftingapp\texteditor.cpp
+	"texteditor.hpp"
+	<iostream>
+	<ctime>
+
+1592951486 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandok, vizsga\vizsga\craftingapp\texteditor.hpp
+	"widget.hpp"
+	"statictext.hpp"
+
+1593106680 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandok, vizsga\vizsga\craftingapp\widget.cpp
+	"widget.hpp"
+	<iostream>
+
+1593299644 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandok, vizsga\vizsga\craftingapp\main.cpp
+	"craftapp.hpp"
+	"button.hpp"
+	"application.hpp"
+	"numbereditor.hpp"
+	"texteditor.hpp"
+	"statictext.hpp"
+	"checkbox.hpp"
+	"selectorlist.hpp"
+	"funcbutton.hpp"
+	<iostream>
+	<vector>
+	<map>
+
+1593290559 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandok, vizsga\vizsga\craftingapp\craftapp.hpp
+	"application.hpp"
+	"application.hpp"
+	"numbereditor.hpp"
+	"texteditor.hpp"
+	"statictext.hpp"
+	"checkbox.hpp"
+	"selectorlist.hpp"
+	"funcbutton.hpp"
+	<map>
+
+1593279978 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandok, vizsga\vizsga\craftingapp\craftapp.cpp
+	"craftapp.hpp"
+	<iostream>
+
+1593299495 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandok, vizsga\vizsga\craftingapp\button.cpp
+	"button.hpp"
+	"graphics.hpp"
+
+1593298803 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandok, vizsga\vizsga\craftingapp\button.hpp
+	"widget.hpp"
+	"graphics.hpp"
+
+1593276865 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandok, vizsga\vizsgak\craftingapp\application.cpp
+	"application.hpp"
+	<iostream>
+
+1593276865 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandok, vizsga\vizsgak\craftingapp\application.hpp
+	"widget.hpp"
+	<vector>
+
+1593253102 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandok, vizsga\vizsgak\craftingapp\widget.hpp
+	"graphics.hpp"
+	<sstream>
+
+1581495986 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandok, vizsga\vizsgak\craftingapp\include\graphics.hpp
+	<string>
+
+1593299495 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandok, vizsga\vizsgak\craftingapp\button.cpp
+	"button.hpp"
+	"graphics.hpp"
+
+1593298803 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandok, vizsga\vizsgak\craftingapp\button.hpp
+	"widget.hpp"
+	"graphics.hpp"
+
+1593254024 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandok, vizsga\vizsgak\craftingapp\checkbox.cpp
+	"checkbox.hpp"
+	<iostream>
+
+1593299153 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandok, vizsga\vizsgak\craftingapp\checkbox.hpp
+	"widget.hpp"
+
+1593279978 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandok, vizsga\vizsgak\craftingapp\craftapp.cpp
+	"craftapp.hpp"
+	<iostream>
+
+1593290559 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandok, vizsga\vizsgak\craftingapp\craftapp.hpp
+	"application.hpp"
+	"application.hpp"
+	"numbereditor.hpp"
+	"texteditor.hpp"
+	"statictext.hpp"
+	"checkbox.hpp"
+	"selectorlist.hpp"
+	"funcbutton.hpp"
+	<map>
+
+1592951486 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandok, vizsga\vizsgak\craftingapp\numbereditor.hpp
+	"widget.hpp"
+
+1592951486 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandok, vizsga\vizsgak\craftingapp\texteditor.hpp
+	"widget.hpp"
+	"statictext.hpp"
+
+1592951486 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandok, vizsga\vizsgak\craftingapp\statictext.hpp
+	"widget.hpp"
+
+1592951486 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandok, vizsga\vizsgak\craftingapp\selectorlist.hpp
+	"widget.hpp"
+	"statictext.hpp"
+	<vector>
+
+1592987667 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandok, vizsga\vizsgak\craftingapp\funcbutton.hpp
+	"widget.hpp"
+	<functional>
+
+1593261980 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandok, vizsga\vizsgak\craftingapp\funcbutton.cpp
+	"graphics.hpp"
+	"funcbutton.hpp"
+	<iostream>
+
+1593356354 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandok, vizsga\vizsgak\craftingapp\main.cpp
+	"craftapp.hpp"
+	"button.hpp"
+	"application.hpp"
+	"numbereditor.hpp"
+	"texteditor.hpp"
+	"statictext.hpp"
+	"checkbox.hpp"
+	"selectorlist.hpp"
+	"funcbutton.hpp"
+	<iostream>
+	<vector>
+	<map>
+
+1592987728 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandok, vizsga\vizsgak\craftingapp\numbereditor.cpp
+	"numbereditor.hpp"
+	<iostream>
+	<ctime>
+
+1593105791 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandok, vizsga\vizsgak\craftingapp\selectorlist.cpp
+	"selectorlist.hpp"
+	<iostream>
+	<vector>
+	"statictext.hpp"
+
+1592951487 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandok, vizsga\vizsgak\craftingapp\statictext.cpp
+	"statictext.hpp"
+	<iostream>
+
+1592951487 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandok, vizsga\vizsgak\craftingapp\texteditor.cpp
+	"texteditor.hpp"
+	<iostream>
+	<ctime>
+
+1593106680 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\beadandok, vizsga\vizsgak\craftingapp\widget.cpp
+	"widget.hpp"
+	<iostream>
+
+1593276865 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\craftingapp\application.cpp
+	"application.hpp"
+	<iostream>
+
+1593276865 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\craftingapp\application.hpp
+	"widget.hpp"
+	<vector>
+
+1593253102 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\craftingapp\widget.hpp
+	"graphics.hpp"
+	<sstream>
+
+1581495986 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\craftingapp\include\graphics.hpp
+	<string>
+
+1593299495 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\craftingapp\button.cpp
+	"button.hpp"
+	"graphics.hpp"
+
+1593298803 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\craftingapp\button.hpp
+	"widget.hpp"
+	"graphics.hpp"
+
+1593254024 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\craftingapp\checkbox.cpp
+	"checkbox.hpp"
+	<iostream>
+
+1593299153 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\craftingapp\checkbox.hpp
+	"widget.hpp"
+
+1593279978 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\craftingapp\craftapp.cpp
+	"craftapp.hpp"
+	<iostream>
+
+1593290559 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\craftingapp\craftapp.hpp
+	"application.hpp"
+	"application.hpp"
+	"numbereditor.hpp"
+	"texteditor.hpp"
+	"statictext.hpp"
+	"checkbox.hpp"
+	"selectorlist.hpp"
+	"funcbutton.hpp"
+	<map>
+
+1592951486 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\craftingapp\numbereditor.hpp
+	"widget.hpp"
+
+1592951486 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\craftingapp\texteditor.hpp
+	"widget.hpp"
+	"statictext.hpp"
+
+1592951486 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\craftingapp\statictext.hpp
+	"widget.hpp"
+
+1592951486 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\craftingapp\selectorlist.hpp
+	"widget.hpp"
+	"statictext.hpp"
+	<vector>
+
+1592987667 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\craftingapp\funcbutton.hpp
+	"widget.hpp"
+	<functional>
+
+1593261980 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\craftingapp\funcbutton.cpp
+	"graphics.hpp"
+	"funcbutton.hpp"
+	<iostream>
+
+1592987728 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\craftingapp\numbereditor.cpp
+	"numbereditor.hpp"
+	<iostream>
+	<ctime>
+
+1593105791 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\craftingapp\selectorlist.cpp
+	"selectorlist.hpp"
+	<iostream>
+	<vector>
+	"statictext.hpp"
+
+1592951487 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\craftingapp\statictext.cpp
+	"statictext.hpp"
+	<iostream>
+
+1592951487 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\craftingapp\texteditor.cpp
+	"texteditor.hpp"
+	<iostream>
+	<ctime>
+
+1593106680 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\craftingapp\widget.cpp
+	"widget.hpp"
+	<iostream>
+
+1593606848 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\buttontesterapp\application.cpp
+	"application.hpp"
+	<iostream>
+
+1593606797 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\buttontesterapp\application.hpp
+	"widget.hpp"
+	<vector>
+
+1593253102 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\buttontesterapp\widget.hpp
+	"graphics.hpp"
+	<sstream>
+
+1581495986 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\buttontesterapp\include\graphics.hpp
+	<string>
+
+1593299495 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\buttontesterapp\button.cpp
+	"button.hpp"
+	"graphics.hpp"
+
+1593298803 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\buttontesterapp\button.hpp
+	"widget.hpp"
+	"graphics.hpp"
+
+1593254024 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\buttontesterapp\checkbox.cpp
+	"checkbox.hpp"
+	<iostream>
+
+1593299153 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\buttontesterapp\checkbox.hpp
+	"widget.hpp"
+
+1593606332 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\buttontesterapp\craftapp.cpp
+	"craftapp.hpp"
+	<iostream>
+
+1593290559 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\buttontesterapp\craftapp.hpp
+	"application.hpp"
+	"application.hpp"
+	"numbereditor.hpp"
+	"texteditor.hpp"
+	"statictext.hpp"
+	"checkbox.hpp"
+	"selectorlist.hpp"
+	"funcbutton.hpp"
+	<map>
+
+1592951486 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\buttontesterapp\numbereditor.hpp
+	"widget.hpp"
+
+1592951486 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\buttontesterapp\texteditor.hpp
+	"widget.hpp"
+	"statictext.hpp"
+
+1592951486 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\buttontesterapp\statictext.hpp
+	"widget.hpp"
+
+1592951486 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\buttontesterapp\selectorlist.hpp
+	"widget.hpp"
+	"statictext.hpp"
+	<vector>
+
+1592987667 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\buttontesterapp\funcbutton.hpp
+	"widget.hpp"
+	<functional>
+
+1593261980 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\buttontesterapp\funcbutton.cpp
+	"graphics.hpp"
+	"funcbutton.hpp"
+	<iostream>
+
+1593613302 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\buttontesterapp\main.cpp
+	"basicbuttonapp.hpp"
+	"widgettesterapp.hpp"
+
+1592987728 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\buttontesterapp\numbereditor.cpp
+	"numbereditor.hpp"
+	<iostream>
+	<ctime>
+
+1593105791 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\buttontesterapp\selectorlist.cpp
+	"selectorlist.hpp"
+	<iostream>
+	<vector>
+	"statictext.hpp"
+
+1592951487 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\buttontesterapp\statictext.cpp
+	"statictext.hpp"
+	<iostream>
+
+1592951487 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\buttontesterapp\texteditor.cpp
+	"texteditor.hpp"
+	<iostream>
+	<ctime>
+
+1593106680 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\buttontesterapp\widget.cpp
+	"widget.hpp"
+	<iostream>
+
+1593606340 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\buttontesterapp\basicbuttonapp.cpp
+	"basicbuttonapp.hpp"
+
+1593612269 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\buttontesterapp\basicbuttonapp.hpp
+	"application.hpp"
+	"button.hpp"
+	"checkbox.hpp"
+
+1593613226 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\buttontesterapp\widgettesterapp.cpp
+	"widgettesterapp.hpp"
+
+1593613405 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\buttontesterapp\widgettesterapp.hpp
+	"application.hpp"
+	"checkbox.hpp"
+	"statictext.hpp"
+	"numbereditor.hpp"
+	"texteditor.hpp"
+	"selectorlist.hpp"
+	"funcbutton.hpp"
+
+1593606340 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\applications\basicbuttonapp.cpp
+	"basicbuttonapp.hpp"
+
+1593612269 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\applications\basicbuttonapp.hpp
+	"application.hpp"
+	"button.hpp"
+	"checkbox.hpp"
+
+1593298803 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\applications\button.hpp
+	"widget.hpp"
+	"graphics.hpp"
+
+1593253102 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\applications\widget.hpp
+	"graphics.hpp"
+	<sstream>
+
+1581495986 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\applications\include\graphics.hpp
+	<string>
+
+1593615166 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\applications\checkbox.hpp
+	"widget.hpp"
+
+1593299495 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\applications\button.cpp
+	"button.hpp"
+	"graphics.hpp"
+
+1593615455 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\applications\checkbox.cpp
+	"checkbox.hpp"
+	<iostream>
+
+1593606332 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\applications\craftapp.cpp
+	"craftapp.hpp"
+	<iostream>
+
+1593290559 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\applications\craftapp.hpp
+	"application.hpp"
+	"application.hpp"
+	"numbereditor.hpp"
+	"texteditor.hpp"
+	"statictext.hpp"
+	"checkbox.hpp"
+	"selectorlist.hpp"
+	"funcbutton.hpp"
+	<map>
+
+1592951486 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\applications\numbereditor.hpp
+	"widget.hpp"
+
+1592951486 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\applications\texteditor.hpp
+	"widget.hpp"
+	"statictext.hpp"
+
+1592951486 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\applications\statictext.hpp
+	"widget.hpp"
+
+1592951486 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\applications\selectorlist.hpp
+	"widget.hpp"
+	"statictext.hpp"
+	<vector>
+
+1592987667 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\applications\funcbutton.hpp
+	"widget.hpp"
+	<functional>
+
+1593261980 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\applications\funcbutton.cpp
+	"graphics.hpp"
+	"funcbutton.hpp"
+	<iostream>
+
+1593615470 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\applications\main.cpp
+	"applications/basicbuttonapp.hpp"
+	"applications/widgettesterapp.hpp"
+
+1593613405 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\applications\widgettesterapp.hpp
+	"application.hpp"
+	"checkbox.hpp"
+	"statictext.hpp"
+	"numbereditor.hpp"
+	"texteditor.hpp"
+	"selectorlist.hpp"
+	"funcbutton.hpp"
+
+1592987728 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\applications\numbereditor.cpp
+	"numbereditor.hpp"
+	<iostream>
+	<ctime>
+
+1593105791 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\applications\selectorlist.cpp
+	"selectorlist.hpp"
+	<iostream>
+	<vector>
+	"statictext.hpp"
+
+1592951487 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\applications\statictext.cpp
+	"statictext.hpp"
+	<iostream>
+
+1592951487 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\applications\texteditor.cpp
+	"texteditor.hpp"
+	<iostream>
+	<ctime>
+
+1593106680 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\applications\widget.cpp
+	"widget.hpp"
+	<iostream>
+
+1593613226 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\applications\widgettesterapp.cpp
+	"widgettesterapp.hpp"
+
+1593606848 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\applications\applications\application.cpp
+	"application.hpp"
+	<iostream>
+
+1593614401 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\applications\applications\application.hpp
+	"../widget.hpp"
+	<vector>
+
+1593606340 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\applications\applications\basicbuttonapp.cpp
+	"basicbuttonapp.hpp"
+
+1593614420 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\applications\applications\basicbuttonapp.hpp
+	"application.hpp"
+	"../button.hpp"
+	"../checkbox.hpp"
+
+1593606332 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\applications\applications\craftapp.cpp
+	"craftapp.hpp"
+	<iostream>
+
+1593614527 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\applications\applications\craftapp.hpp
+	"application.hpp"
+	"application.hpp"
+	"../numbereditor.hpp"
+	"../texteditor.hpp"
+	"../statictext.hpp"
+	"../checkbox.hpp"
+	"../selectorlist.hpp"
+	"../funcbutton.hpp"
+	<map>
+
+1593613226 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\applications\applications\widgettesterapp.cpp
+	"widgettesterapp.hpp"
+
+1593614543 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\applications\applications\widgettesterapp.hpp
+	"application.hpp"
+	"../checkbox.hpp"
+	"../statictext.hpp"
+	"../numbereditor.hpp"
+	"../texteditor.hpp"
+	"../selectorlist.hpp"
+	"../funcbutton.hpp"
+
