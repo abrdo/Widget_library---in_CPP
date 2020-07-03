@@ -12,7 +12,6 @@ protected:
     int _XX, _YY; // window size parameters
     std::vector<Widget*> _widgets;
     int _focused; // index of focused widget;
-    bool _exit;
 public:
     Application(int window_size_x, int window_size_y);
     virtual ~Application();
@@ -21,8 +20,6 @@ public:
     void handle__iterate_focused_by_tab__show(genv::event ev);
 
     virtual void run(int timer = 40);
-
-    void shot_down(){_exit = true;}
 };
 
 #endif // APPLICATION_HPP

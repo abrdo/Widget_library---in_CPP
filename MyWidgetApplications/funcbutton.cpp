@@ -10,20 +10,22 @@ FuncButton::FuncButton(int x, int y, std::string label, std::function<void()> fu
 
 void FuncButton::handle(genv::event ev){
     focus_by_click(ev);
-    if(focusing_click(ev) || is_focused() && ev.keycode == key_enter){
-        call();
+    if(focusing_click(ev) || is_focused() && (ev.keycode == key_enter || ev.keycode == key_space)){
+        _f();
         _pushed = true;
     }
-    if(is_focused() && (ev.button == -btn_left || ev.keycode == -key_enter))
+    if(_pushed && (ev.button == -btn_left || ev.keycode == -key_enter || ev.keycode == -key_space)){
         _pushed = false;
-}
+        if(ev.keycode != -key_enter && ev.keycode != -key_space){
+            set_focused(false);
+        }
+    }
 
-void FuncButton::call(){
-    _f(); //f(this);
 }
 
 void FuncButton::show(genv::canvas &c){
-    if(_pushed) c<<color(90,90,90);
+    if(!is_focusable()) c<<color(130,130,130);
+    else if(_pushed) c<<color(90,90,90);
     else c<<color(255,255,255);
     c << move_to(_x+_size_x/2-c.twidth(_label)/2, _y+_size_y/2-_fonthight/2)<< text(_label);
     show_frame(c);

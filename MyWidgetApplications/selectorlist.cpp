@@ -20,7 +20,7 @@ SelectorList::~SelectorList(){
 
 void SelectorList::new_item(string itemtext){
     int y = 5 + _items.size()*_leading;
-    _items.push_back(new StaticText(5, y, itemtext, 200,200,200));
+    _items.push_back(new StaticTextComp(5, y, itemtext, 200,200,200));
 }
 
 void SelectorList::delete_selected(){
@@ -29,7 +29,7 @@ void SelectorList::delete_selected(){
         for(int i = _items.size()-1; _selected_index < i; i--){
             _items[i]->set_y(_items[i-1]->get_y());
         }
-        //deletion:
+        // deletion:
         delete _items[_selected_index];
         _items[_selected_index] = 0;
         for(int i = _selected_index; i<_items.size()-1; i++){
@@ -87,12 +87,12 @@ void SelectorList::show(genv::canvas &c){
     canv.open(_size_x+1, 5+_items.size()*_leading+1);
     canv.load_font(__fontfile, __fontsize);
 
-    //SELECT:
+    // SELECT:
     if(_selected_index != -1){
         canv<<color(255,255,0)
             <<move_to(4, 5 + _selected_index*(_leading))<<box(_size_x-8, _leading);
     }
-    //LIST:
+    // LIST:
     if(_selected_index != -1) _items[_selected_index]->set_rgb(70,70,70);
     for(auto item : _items){
         item->show(canv);
@@ -101,13 +101,13 @@ void SelectorList::show(genv::canvas &c){
 
     c<<stamp(canv, 0, 0+_scroll_shift, _size_x, _size_y, _x, _y);
 
-    //ScrollBar
+    // ScrollBar
     c<<color(150,150,150);
     c<<move_to(_x+_size_x-2, _y+2)<<box(-20, (_size_y-4));
     c<<color(100,100,100);
     c<<move_to(_x+_size_x-2, _y+2)<<box(-20,20);
     c<<move_to(_x+_size_x-2, _y+_size_y-2)<<box(-20,-20);
 
-    //Frame
+    // Frame
     show_frame();
 }

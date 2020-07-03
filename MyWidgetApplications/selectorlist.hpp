@@ -2,13 +2,13 @@
 #define SELECTORLIST_HPP
 
 #include "widget.hpp"
-#include "statictext.hpp"
+#include "statictextcomp.hpp"
 #include <vector>
 
 
 
 class SelectorList : public Widget{
-    std::vector<StaticText*> _items;
+    std::vector<StaticTextComp*> _items;
     int _selected_index;
     int _leading;
     int _scroll_shift;

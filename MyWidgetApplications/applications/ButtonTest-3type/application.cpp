@@ -6,7 +6,7 @@ using namespace genv;
 
 Application::Application(int XX, int YY) : _XX(XX), _YY(YY){
     _focused = -1;
-    _exit = false;
+    gout.open(XX, YY);
 }
 
 Application::~Application(){
@@ -60,13 +60,9 @@ void Application::handle__iterate_focused_by_tab__show(genv::event ev){
 
 
 void Application::run(int timer){
-    gout.open(_XX, _YY);
     gin.timer(timer);
     event ev;
-    while(gin >> ev && !_exit){
+    while(gin >> ev && ev.keycode != key_escape){
         handle__iterate_focused_by_tab__show(ev);
-        if(ev.keycode == key_escape)
-            _exit = true;
     }
-    _exit = false;
 }

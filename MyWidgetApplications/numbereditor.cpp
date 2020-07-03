@@ -4,7 +4,14 @@
 using namespace std;
 using namespace genv;
 
-NumberEditor::NumberEditor(int x, int y, bool p_isbounded, int lb, int ub) : Widget(x,y,0,25), _is_bounded(p_isbounded), _lbound(lb), _ubound(ub), _snum("0"){
+NumberEditor::NumberEditor(int x, int y, int sx, int sy, bool p_isbounded, int lb, int ub, bool set2bound) : Widget(x,y,sx,sy), _is_bounded(p_isbounded), _lbound(lb), _ubound(ub), _snum("0"), _set_to_bound(set2bound){
+    if(_ubound < _lbound){
+        cerr<<"ERROR: The lower bound must be smaller than the upper bound by the bounded NumberEditor."<<endl;
+        //exit(1);
+    }
+}
+
+NumberEditor::NumberEditor(int x, int y, bool p_isbounded, int lb, int ub, bool set2bound) : Widget(x,y,0,25), _is_bounded(p_isbounded), _lbound(lb), _ubound(ub), _snum("0"), _set_to_bound(set2bound){
     if(_ubound < _lbound){
         cerr<<"ERROR: The lower bound must be smaller than the upper bound by the bounded NumberEditor."<<endl;
         //exit(1);
@@ -17,11 +24,13 @@ bool NumberEditor::is_in_range(int i){
 }
 
 void NumberEditor::handle(event ev){
+    if(!is_focusable()) return;
+    string prev_snum = _snum;
     Widget::focus_by_click(ev);
     if(!is_focused()){
         if(_snum == "") _snum = "0";
-        if(_ubound < to_int(_snum)) _snum = to_str(_ubound);
-        if(_lbound > to_int(_snum)) _snum = to_str(_lbound);
+        //if(_ubound < to_int(_snum)) _snum = to_str(_ubound);
+        //if(_lbound > to_int(_snum)) _snum = to_str(_lbound);
     }
     // Typing:
     if(is_focused()){
@@ -41,37 +50,34 @@ void NumberEditor::handle(event ev){
     //========================================= Increase / Decrease BEGIN ========================================================
         if(ev.keycode == key_up){
             _snum = to_str(to_int(_snum)+1);
-            if(_ubound < to_int(_snum)) _snum = to_str(_ubound);
-            if(_lbound > to_int(_snum)) _snum = to_str(_lbound);
         }
         if(ev.keycode == key_down){
             _snum = to_str(to_int(_snum)-1);
-            if(_ubound < to_int(_snum)) _snum = to_str(_ubound);
-            if(_lbound > to_int(_snum)) _snum = to_str(_lbound);
         }
         if(ev.keycode == key_pgup){
             _snum = to_str(to_int(_snum)+10);
-            if(_ubound < to_int(_snum)) _snum = to_str(_ubound);
-            if(_lbound > to_int(_snum)) _snum = to_str(_lbound);
         }
         if(ev.keycode == key_pgdn){
             _snum = to_str(to_int(_snum)-10);
-            if(_ubound < to_int(_snum)) _snum = to_str(_ubound);
-            if(_lbound > to_int(_snum)) _snum = to_str(_lbound);
         }
     }
     int tx = _x+_size_x, ty = _y+_size_y;
     if(ev.button == btn_left && is_inside(ev.pos_x, ev.pos_y, tx-13, tx-2, _y+2, _y+_size_y/2)){
         _snum = to_str(to_int(_snum)+1);
-        if(_ubound < to_int(_snum)) _snum = to_str(_ubound);
-        if(_lbound > to_int(_snum)) _snum = to_str(_lbound);
     }
     if(ev.button == btn_left && is_inside(ev.pos_x, ev.pos_y, tx-13, tx-2, ty-_size_y/2, ty-2)){
         _snum = to_str(to_int(_snum)-1);
-        if(_ubound < to_int(_snum)) _snum = to_str(_ubound);
-        if(_lbound > to_int(_snum)) _snum = to_str(_lbound);
     }
     //======================================= Increase / Decrease END ======================================================
+    if(_snum!="" && _snum!="-"){
+        if(_set_to_bound){
+            if(_ubound < to_int(_snum)) _snum = to_str(_ubound);
+            if(_lbound > to_int(_snum)) _snum = to_str(_lbound);
+        }else{
+            if(_ubound < to_int(_snum)) _snum = prev_snum;
+            if(_lbound > to_int(_snum)) _snum = prev_snum;
+        }
+    }
 }
 
 void NumberEditor::show(genv::canvas &c){

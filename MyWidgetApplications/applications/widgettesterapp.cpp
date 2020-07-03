@@ -4,12 +4,12 @@ using namespace std;
 
 
 WidgetTesterApp::WidgetTesterApp(int XX, int YY) : Application(XX,YY){
-    _widgets.push_back(new NumberEditor(10,10, true, 0, 100));
-    _widgets.push_back(new NumberEditor(10,60));
+    _widgets.push_back(new NumberEditor(10,10, 200, 25, true, -22, 100));
+    _widgets.push_back(new NumberEditor(10,60, true, -22, 100, true));
     _widgets.push_back(new NumberEditor(10,110));
     _widgets.push_back(new TextEditor(10,160, 100));
     _widgets.push_back(new StaticText(10, 210, "Helloka! Mi a  helyzet?"));
-    _widgets.push_back(new StaticText(10,300, "Neved:"));
+    _widgets.push_back(new StaticText(7,300, "Neved:"));
     _widgets.push_back(new TextEditor(60,300, 140));
     _widgets.push_back(new CheckBox(10, 350, 20,20));
     _widgets.push_back(new StaticText(40, 350, "check"));

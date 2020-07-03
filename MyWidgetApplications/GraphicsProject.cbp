@@ -42,15 +42,12 @@
 		</Linker>
 		<Unit filename="applications/application.cpp" />
 		<Unit filename="applications/application.hpp" />
-		<Unit filename="applications/basicbuttonapp.cpp" />
-		<Unit filename="applications/basicbuttonapp.hpp" />
+		<Unit filename="applications/calculator.cpp" />
+		<Unit filename="applications/calculator.hpp" />
 		<Unit filename="applications/craftapp.cpp" />
 		<Unit filename="applications/craftapp.hpp" />
 		<Unit filename="applications/widgettesterapp.cpp" />
 		<Unit filename="applications/widgettesterapp.hpp" />
-		<Unit filename="basicbuttonapp.hpp" />
-		<Unit filename="button.cpp" />
-		<Unit filename="button.hpp" />
 		<Unit filename="checkbox.cpp" />
 		<Unit filename="checkbox.hpp" />
 		<Unit filename="funcbutton.cpp" />
@@ -62,11 +59,12 @@
 		<Unit filename="selectorlist.hpp" />
 		<Unit filename="statictext.cpp" />
 		<Unit filename="statictext.hpp" />
+		<Unit filename="statictextcomp.cpp" />
+		<Unit filename="statictextcomp.hpp" />
 		<Unit filename="texteditor.cpp" />
 		<Unit filename="texteditor.hpp" />
 		<Unit filename="widget.cpp" />
 		<Unit filename="widget.hpp" />
-		<Unit filename="widgettesterapp.hpp" />
 		<Extensions>
 			<code_completion />
 			<debugger />

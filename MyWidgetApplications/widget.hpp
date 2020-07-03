@@ -10,11 +10,13 @@ private:
     bool _focused;
     bool _focusable;
 protected:
+    bool _targeted;
     int _x, _y, _size_x, _size_y;
     int _fonthight;
     std::string __fontfile;
     int __fontsize;
     unsigned char _r, _g, _b;
+    unsigned char _frame_r, _frame_g, _frame_b;
 
 public:
     Widget(){}
@@ -33,6 +35,7 @@ public:
     void set_focused(bool f);
     bool is_focusable();
     void set_focusable(bool f);
+    void set_color(unsigned char r, unsigned char g, unsigned char b){ _r=r; _g=g; _b=b;}
 
 
     bool mouse_above(genv::event ev);
