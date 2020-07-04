@@ -4,7 +4,7 @@
 using namespace std;
 using namespace genv;
 
-NumberEditor::NumberEditor(int x, int y, int sx, int sy, bool p_isbounded, int lb, int ub, bool set2bound) : Widget(x,y,sx,sy), _is_bounded(p_isbounded), _lbound(lb), _ubound(ub), _snum("0"), _set_to_bound(set2bound){
+NumberEditor::NumberEditor(int x, int y, int sx, int sy, bool p_isbounded, int lb, int ub, bool set2bound, int fontsize) : Widget(x,y,sx,sy,fontsize), _is_bounded(p_isbounded), _lbound(lb), _ubound(ub), _snum("0"), _set_to_bound(set2bound){
     if(_ubound < _lbound){
         cerr<<"ERROR: The lower bound must be smaller than the upper bound by the bounded NumberEditor."<<endl;
         //exit(1);
@@ -97,9 +97,20 @@ void NumberEditor::show(genv::canvas &c){
     c<<move_to(tx-11,ty-9)<<line(7,0);
 
     // number show
+    canvas c2;
+    c2.load_font(__fontfile, __fontsize);
+    c2.open(c2.twidth(_snum+"|"), c2.cascent() + c2.cdescent());
+    if(_snum!="")
+        c2<<move_to(0,0)<<color(255,255,255)<<text(_snum); //text
+    else c2<<move_to(0, 0)<<color(255,255,255);
+    if(is_focused() && _cursor_visible)
+        c2<<text("|");
+    gout<<stamp(c2, _x+__fontsize/2, _y+_size_y/2-(c2.cascent() + c2.cdescent())/2);
+    /*
     if(_snum!="")
         c<<move_to(_x+3, _y+3)<<color(255,255,255)<<text(_snum); //text
     else c<<move_to(_x+3, _y+3)<<color(255,255,255);
     if(is_focused() && _cursor_visible)
         c<<text("|");
+    */
 }

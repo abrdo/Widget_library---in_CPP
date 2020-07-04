@@ -20,7 +20,7 @@ protected:
 
 public:
     Widget(){}
-    Widget(int x, int y, int sx, int sy);
+    Widget(int x, int y, int sx, int sy, int fontsize = 14);
     virtual ~Widget(){}
 
     int get_x(){return _x;}

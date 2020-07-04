@@ -8,6 +8,8 @@ using namespace genv;
 
 
 int main(){
+    WidgetTesterApp myapp;
+    myapp.run();
     Calculator mycalculator;
     mycalculator.run();
 

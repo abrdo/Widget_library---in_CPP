@@ -11,8 +11,8 @@ class NumberEditor : public Widget{
 public:
     bool _is_bounded;
     bool is_in_range(int i);
-    NumberEditor(int x, int y, int sx, int sy = 25, bool is_bounded = false, int lower_bound_ = -2147483638, int upper_bound_ = 214748363, bool _set_to_bound_if_out_of_range = false /*if false, user can't continue typinf to out of range*/);
-    NumberEditor(int x, int y, bool is_bounded = false, int lower_bound_ = -2147483638, int upper_bound_ = 2147483637, bool _set_to_bound_if_out_of_range = false); // size_y =25;
+    NumberEditor(int x, int y, int sx, int sy = 25, bool is_bounded = false, int lower_bound_ = -2147483638, int upper_bound_ = 214748363, bool _set_to_bound_if_out_of_range = false /*if false, user can't continue typinf to out of range*/, int fontsize = 14);
+    NumberEditor(int x, int y, bool is_bounded = false, int lower_bound_ = -2147483638, int upper_bound_ = 2147483637, bool _set_to_bound_if_out_of_range = false/*if false, user can't continue typinf to out of range*/); // size_y =25;
     void handle(genv::event ev) override;
     void show(genv::canvas &c = genv::gout) override;
 

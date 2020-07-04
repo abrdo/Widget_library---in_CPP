@@ -18,6 +18,7 @@ class Calculator : public Application
     Operation _oper;
     std::string _error_message;
     std::vector<int> _history_op1;
+    int yshift; // used just for displaying
 
    // View ----
     // display
@@ -44,7 +45,7 @@ class Calculator : public Application
 
 
 public:
-    Calculator(int window_size_x = 305, int window_size_y = 275);
+    Calculator(int window_size_x = 305, int window_size_y = 350);
     void undo();
     void reset();
     void update();

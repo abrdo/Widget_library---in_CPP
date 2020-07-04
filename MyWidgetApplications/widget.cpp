@@ -2,9 +2,10 @@
 #include <iostream>
 using namespace genv;
 
-Widget::Widget(int x, int y, int sx, int sy) : _x(x), _y(y), _size_x(sx-1), _size_y(sy-1), _targeted(false), _focused(false), _focusable(true){
+Widget::Widget(int x, int y, int sx, int sy, int fontsize)
+        : _x(x), _y(y), _size_x(sx-1), _size_y(sy-1), __fontsize(fontsize), _targeted(false), _focused(false), _focusable(true){
     __fontfile = "LiberationSans-Regular.ttf";
-    __fontsize = 14;
+    // __fontsize = 14; - default
     _fonthight = genv::gout.cascent()+genv::gout.cdescent();
     gout.load_font(__fontfile, __fontsize); //size - hight in pixels : [14 - 15 px]
     _frame_r = _frame_g = _frame_b = 255;
