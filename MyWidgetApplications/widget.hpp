@@ -4,6 +4,7 @@
 #include "graphics.hpp"
 #include "../window.hpp"
 #include <sstream>
+#include <map>
 
 class Window;
 
@@ -35,6 +36,8 @@ public:
     bool is_focusable();
     void set_focusable(bool f);
     void set_color(unsigned char r, unsigned char g, unsigned char b){ _r=r; _g=g; _b=b;}
+    std::map<char, unsigned char> get_frame_color(){std::map<char, unsigned char> out; out['r']=_frame_r; out['g']=_frame_g; out['b']=_frame_b; return out;};
+    void set_frame_color(unsigned char r, unsigned char g, unsigned char b){ _frame_r=r; _frame_g=g; _frame_b=b;}
 
 
     bool mouse_above(genv::event ev) const;

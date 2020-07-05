@@ -11,12 +11,12 @@ FuncButton::FuncButton(int x, int y, std::string label, std::function<void()> fu
 void FuncButton::handle(genv::event ev){
     focus_by_click(ev);
     if(focusing_click(ev) || _focused && (ev.keycode == key_enter || ev.keycode == key_space)){
-        _f();
         _pushed = true;
+        _f();
     }
-    if(_pushed && (ev.button == -btn_left || ev.keycode == -key_enter || ev.keycode == -key_space)){
+    if(_pushed && (ev.button == -btn_left || ev.keycode == -271/*=enter unpushed*/ || ev.keycode == -key_space)){
         _pushed = false;
-        if(ev.keycode != -key_enter && ev.keycode != -key_space){
+        if(ev.keycode != -271 && ev.keycode != -key_space){
             _focused = false;
         }
     }

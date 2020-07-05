@@ -18,6 +18,7 @@ NumberEditor::NumberEditor(int x, int y, int sx, int sy, bool p_isbounded, int l
     _size_x = sx;
     _size_y = sy;
     __fontsize = fontsize;
+    _possible_to_type_minus = true;
     if(bgb != -1){
         _bgcol_r = bgr;
         _bgcol_g = bgg;
@@ -45,7 +46,7 @@ void NumberEditor::handle(event ev){
             if(_snum == "0") _snum = "";
             _snum += ev.keycode;
         }
-        if(_snum == "" && ev.keycode == '-')  // negative numbers
+        if(_snum == "" && ev.keycode == '-' && _possible_to_type_minus)  // negative numbers
             _snum += ev.keycode;
         if(ev.keycode == key_backspace && _snum.size() > 0){
             _snum.pop_back();

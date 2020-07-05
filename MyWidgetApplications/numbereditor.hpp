@@ -8,6 +8,7 @@ class NumberEditor : public Widget{
     const int _ubound, _lbound; // upper bound, lower bound
     bool _set_to_bound; // set_to_bound_if_out_of_range = false /*if false, user can't continue typinf to out of range
     bool _cursor_visible;
+    bool _possible_to_type_minus;
 public:
     bool _is_bounded;
     bool is_in_range(int i);
@@ -20,6 +21,7 @@ public:
     void set_text(std::string snum){ _snum = snum; }
     int get_number(){ if(is_empty()) return 0; else return Widget::to_int(_snum); }
     bool is_empty(){ return _snum == ""; }
+    void set_possibility_to_type_minus(bool poss){_possible_to_type_minus = poss;}
 
 };
 

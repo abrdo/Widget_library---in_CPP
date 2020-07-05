@@ -7,6 +7,7 @@
 #include "../statictext.hpp"
 
 #include <vector>
+#include <map>
 
 enum Operation {null, ADD, SUBSTRACT, MULTIPLY, DIVIDE, EQUALS};
 
@@ -19,6 +20,7 @@ class Calculator : public Window
     std::string _error_message;
     std::vector<int> _history_op1;
     bool _op2_is_empty;
+    std::map<char, unsigned char> _default_button_frame_color;
 
    // View ----
     // display

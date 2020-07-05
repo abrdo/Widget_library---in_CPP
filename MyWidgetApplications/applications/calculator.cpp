@@ -21,9 +21,10 @@ Calculator::Calculator(int XX, int YY) : Window(XX,YY){
     _widgets.push_back(_op1W);
 
     _op2W = new NumberEditor(25, 75, 150, 45, true, _lbound, _ubound, false, 20/*-->fontsize*/, 30,30,30);
+    _op2W->set_possibility_to_type_minus(false);
     _widgets.push_back(_op2W);
 
-    _operW = new StaticText(2, 75, "", 180, 180, 180, false, 150, 50, 20);
+    _operW = new StaticText(2+4, 75, "", 180, 180, 180, false, 150, 50, 20);
     _widgets.push_back(_operW);
 
     // numbers
@@ -31,7 +32,7 @@ Calculator::Calculator(int XX, int YY) : Window(XX,YY){
         _numberWs[i] = new FuncButton(25+(i-1)%3*50, 125+(i-1)/3*50, Widget::to_str(i), [=](){this->number_pushed(i);}, 50,50);
         _widgets.push_back(_numberWs[i]);
     }
-    _signW = new FuncButton(25, 125+3*50, "+/-", [&](){_op2 = _op2W->get_number(); _op2 = -_op2; update();}, 50,50);
+    _signW = new FuncButton(25, 125+3*50, "+/-", [&](){_op2 = _op2W->get_number(); _op2_is_empty = _op2W->is_empty(); _op2 = -_op2; update();}, 50,50);
     _widgets.push_back(_signW);
     _numberWs[0] = new FuncButton(25+1*50, 125+3*50, "0", [=](){this->number_pushed(0);}, 50,50);
     _widgets.push_back(_numberWs[0]);
@@ -56,7 +57,8 @@ Calculator::Calculator(int XX, int YY) : Window(XX,YY){
     _equalsW = new FuncButton(30+3*50, 125+2*50, "=", [=](){this->operation_pushed(Operation::EQUALS);}, 100,50);
     _widgets.push_back(_equalsW);
 
-    update();
+    _default_button_frame_color = _newW->get_frame_color();
+    reset();
 }
 
 void Calculator::undo(){
@@ -76,15 +78,18 @@ void Calculator::pop(){
 }
 
 void Calculator::reset(){
+    for(Widget*w : _widgets) w->set_focused(false);
     _op1 = _op2 = 0;
     _oper = null;
     _error_message = "";
     _history_op1.clear();
     _op2_is_empty = true;
     update();
+    _op2W->set_focused(true);
 }
 
 void Calculator::update(){
+    _newW->set_frame_color(_default_button_frame_color['r'], _default_button_frame_color['g'], _default_button_frame_color['b']);
     // if error
     if(_error_message!=""){
         _op1W->set_color(255, 70, 70);
@@ -197,6 +202,8 @@ void Calculator::operation_pushed(Operation new_op){
         _op2_is_empty = true;
     }
     _oper = new_op;
+    for(Widget* w : _widgets) w->set_focused(false);
+    _op2W->set_focused(true);
 
     if(_oper == EQUALS){
         _op2 = _op1;
@@ -206,6 +213,8 @@ void Calculator::operation_pushed(Operation new_op){
     if(_oper == EQUALS){
         _op2 = 0;
         _op2_is_empty = true;
+        _op2W->set_focusable(false);
+        _newW->set_focused(true);
     }
 }
 
@@ -216,20 +225,41 @@ void Calculator::run(int timer){
     while(gin >> ev && !_exit){
         if(ev.keycode == '+'){
             operation_pushed(Operation::ADD);
+            for(Widget* w : _widgets) w->set_focused(false);
+            _op2W->set_focused(true);
         }
         if(ev.keycode == '-'){
             operation_pushed(Operation::SUBSTRACT);
+            for(Widget* w : _widgets) w->set_focused(false);
+            _op2W->set_focused(true);
         }
         if(ev.keycode == '*'){
             operation_pushed(Operation::MULTIPLY);
+            for(Widget* w : _widgets) w->set_focused(false);
+            _op2W->set_focused(true);
         }
         if(ev.keycode == '/'){
             operation_pushed(Operation::DIVIDE);
+            for(Widget* w : _widgets) w->set_focused(false);
+            _op2W->set_focused(true);
         }
         if(ev.keycode == key_enter){
-            operation_pushed(Operation::EQUALS);
-        }
+            bool there_is_a_focused_button = false;
+            if(!_op2W->is_focused()){
+                for(Widget* w : _widgets){
+                    if(w->is_focused())
+                        there_is_a_focused_button = true;
+                }
+            }
+            if(!there_is_a_focused_button){
+                operation_pushed(Operation::EQUALS);
+                for(Widget* w : _widgets) w->set_focused(false);
+                ev.keycode = 'ß'; //any key but not enter or space
+                _newW->set_focused(true);
 
+            }
+        }
+        //----------------------------------------------------------
         handle__iterate_focused_by_tab__show(ev);
         if(ev.keycode == key_escape)
             _exit = true;
