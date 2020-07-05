@@ -2,8 +2,9 @@
 #include <iostream>
 #include <math.h>
 
+using namespace genv;
 
-Calculator::Calculator(int XX, int YY) : Application(XX,YY){
+Calculator::Calculator(int XX, int YY) : Window(XX,YY){
     // MODEL ----
     _op1 = _op2 = 0;
     _oper = null;
@@ -11,14 +12,15 @@ Calculator::Calculator(int XX, int YY) : Application(XX,YY){
 
     _ubound = 1e9-1;
     _lbound = -1e9+1;
+    _op2_is_empty = true;
 
 
     // VIEW -----
     // display
-    _op1W = new StaticText(25, 25, "0", 180, 180, 180, false, 150, 50, 20);
+    _op1W = new StaticText(25+4, 25, "0", 180, 180, 180, false, 150, 50, 20);
     _widgets.push_back(_op1W);
 
-    _op2W = new NumberEditor(25, 75, 150, 50, true, _lbound, _ubound, false, 20);
+    _op2W = new NumberEditor(25, 75, 150, 45, true, _lbound, _ubound, false, 20/*-->fontsize*/, 30,30,30);
     _widgets.push_back(_op2W);
 
     _operW = new StaticText(2, 75, "", 180, 180, 180, false, 150, 50, 20);
@@ -35,7 +37,7 @@ Calculator::Calculator(int XX, int YY) : Application(XX,YY){
     _widgets.push_back(_numberWs[0]);
 
     // extra
-    _backspaceW = new FuncButton(80+2*50, 75, "<X", [=](){_op2 = _op2W->get_number(); _op2 /= 10; update();}, 50,25);
+    _backspaceW = new FuncButton(80+2*50, 75, "C", [=](){this->pop();}, 50,25);
     _widgets.push_back(_backspaceW);
     _undoW = new FuncButton(30+3*50, 100, "undo", [=](){this->undo();}, 50,25);
     _widgets.push_back(_undoW);
@@ -47,7 +49,7 @@ Calculator::Calculator(int XX, int YY) : Application(XX,YY){
     _widgets.push_back(_addW);
     _substractW = new FuncButton(30+4*50, 125, "-", [=](){this->operation_pushed(Operation::SUBSTRACT);}, 50,50);
     _widgets.push_back(_substractW);
-    _multiplyW = new FuncButton(30+3*50, 125+50, "*", [=](){this->operation_pushed(Operation::MULTIPLY);}, 50,50);
+    _multiplyW = new FuncButton(30+3*50, 125+50, "x", [=](){this->operation_pushed(Operation::MULTIPLY);}, 50,50);
     _widgets.push_back(_multiplyW);
     _divideW = new FuncButton(30+4*50, 125+50, "/", [=](){this->operation_pushed(Operation::DIVIDE);}, 50,50);
     _widgets.push_back(_divideW);
@@ -66,12 +68,19 @@ void Calculator::undo(){
     update();
 }
 
+void Calculator::pop(){
+    _op2 = _op2W->get_number();
+    _op2 /= 10;
+    if(_op2==0)
+        _op2_is_empty = true; update();
+}
 
 void Calculator::reset(){
     _op1 = _op2 = 0;
     _oper = null;
     _error_message = "";
     _history_op1.clear();
+    _op2_is_empty = true;
     update();
 }
 
@@ -80,7 +89,6 @@ void Calculator::update(){
     if(_error_message!=""){
         _op1W->set_color(255, 70, 70);
         _op1W->set_text(_error_message);
-        _op2W->set_text("0");
         for(Widget* w : _widgets){
             w->set_focused(false);
             w->set_focusable(false);
@@ -95,7 +103,7 @@ void Calculator::update(){
 
     // display
     _op1W->set_text(Widget::to_str(_op1));
-    _op2W->set_text(Widget::to_str(_op2));
+    if(!_op2_is_empty) _op2W->set_text(Widget::to_str(_op2)); else _op2W->set_text("");
 
     // operation sign
     if(_oper == null)
@@ -105,7 +113,7 @@ void Calculator::update(){
     if(_oper == SUBSTRACT)
         _operW->set_text("-");
     if(_oper == MULTIPLY)
-        _operW->set_text("*");
+        _operW->set_text("x");
     if(_oper == DIVIDE)
         _operW->set_text("/");
     if(_oper == EQUALS)
@@ -131,7 +139,7 @@ void Calculator::update(){
 
 void Calculator::number_pushed(int n){
     _op2 = _op2W->get_number();
-    int prev_op2 = _op2;
+    _op2_is_empty = _op2W->is_empty();
 
     std::string s_op2 = Widget::to_str(_op2);
     if(s_op2[0]!='-' && s_op2.size()   >= log10(_ubound)) return;
@@ -141,55 +149,91 @@ void Calculator::number_pushed(int n){
         _op2 = 10*_op2 + n;
     else
         _op2 = 10*_op2 - n;
+
+    _op2_is_empty = false;
     update();
 }
 
-void Calculator::operation_pushed(Operation op){
+void Calculator::operation_pushed(Operation new_op){
+    // "pull":
+    _op2 = _op2W->get_number();
+    _op2_is_empty = _op2W->is_empty();
+    // for check overflow errors:
     int prev_op1 = _op1;
     int prev_op2 = _op2;
     _history_op1.push_back(_op1);
-    if(_oper == null /*in case of undo not:*/&& !(_oper == null && _op1 != 0 && _op2 == 0)){
-        _op1 = _op2;
-        _op2 = 0;
-    }
-    if(_oper == ADD){
-        _op1 = _op1 + _op2;
-        _op2 = 0;
-        if((0<prev_op1 && 0<prev_op2 && _op1<0) || _ubound<_op1) _error_message = "Overflow Error";
-        if((0>prev_op1 && 0>prev_op2 && _op1>0) || _lbound>_op1) _error_message = "Underflow Error";
-    }
-    if(_oper == SUBSTRACT){
-        _op1 = _op1 - _op2;
-        _op2 = 0;
-        if((0<prev_op1 && 0>prev_op2 && _op1<0) || _ubound<_op1) _error_message = "Overflow Error";
-        if((0>prev_op1 && 0<prev_op2 && _op1>0) || _lbound>_op1) _error_message = "Underflow Error";
-    }
-    if(_oper == MULTIPLY){
-        _op1 = _op1 * _op2;
-        _op2 = 0;
-        if((0<prev_op1 && 0<prev_op2 && _op1<0) || _ubound<_op1) _error_message = "Overflow Error";
-        if((0>prev_op1 && 0>prev_op2 && _op1>0) || _lbound>_op1) _error_message = "Underflow Error";
-        if((0<prev_op1 && 0>prev_op2 && _op1>0) || _lbound>_op1) _error_message = "Underflow Error";
-        if((0>prev_op1 && 0<prev_op2 && _op1>0) || _lbound>_op1) _error_message = "Underflow Error";
-    }
-    if(_oper == DIVIDE){
-        if(_op2 == 0){
-            _oper = null;
-            _error_message = "Error: Zero divider";
+    if(!_op2_is_empty){
+        if(_oper == null && /*not in case of undo:*/!(_oper == null && _op1 != 0 && _op2 == 0)){
+            _op1 = _op2;
         }
-        else{
-            _op1 = _op1 / _op2;
-            _op2 = 0;
-            _error_message = "";
+        if(_oper == ADD){
+            _op1 = _op1 + _op2;
+            if((0<prev_op1 && 0<prev_op2 && _op1<0) || _ubound<_op1) _error_message = "Overflow Error";
+            if((0>prev_op1 && 0>prev_op2 && _op1>0) || _lbound>_op1) _error_message = "Underflow Error";
         }
+        if(_oper == SUBSTRACT){
+            _op1 = _op1 - _op2;
+            if((0<prev_op1 && 0>prev_op2 && _op1<0) || _ubound<_op1) _error_message = "Overflow Error";
+            if((0>prev_op1 && 0<prev_op2 && _op1>0) || _lbound>_op1) _error_message = "Underflow Error";
+        }
+        if(_oper == MULTIPLY){
+            _op1 = _op1 * _op2;
+            if     ((0<prev_op1 && 0<prev_op2) && _op1/prev_op1!=prev_op2 || _ubound<_op1) _error_message = "Overflow Error";
+            else if((0>prev_op1 && 0>prev_op2) && _op1/prev_op1!=prev_op2 || _lbound>_op1) _error_message = "Underflow Error";
+            else if((0<prev_op1 && 0>prev_op2) && _op1/prev_op1!=prev_op2 || _lbound>_op1) _error_message = "Underflow Error";
+            else if((0>prev_op1 && 0<prev_op2) && _op1/prev_op1!=prev_op2 || _lbound>_op1) _error_message = "Underflow Error";
+        }
+        if(_oper == DIVIDE){
+            if(_op2 == 0){
+                _oper = null;
+                _error_message = "Math Error";
+            }
+            else{
+                _op1 = _op1 / _op2;
+                _error_message = "";
+            }
+        }
+        _op2 = 0;
+        _op2_is_empty = true;
     }
-    _oper = op;
+    _oper = new_op;
 
     if(_oper == EQUALS){
         _op2 = _op1;
+        _op2_is_empty = false;
     }
     update();
     if(_oper == EQUALS){
         _op2 = 0;
+        _op2_is_empty = true;
     }
+}
+
+void Calculator::run(int timer){
+    gout.open(_XX, _YY);
+    gin.timer(timer);
+    event ev;
+    while(gin >> ev && !_exit){
+        if(ev.keycode == '+'){
+            operation_pushed(Operation::ADD);
+        }
+        if(ev.keycode == '-'){
+            operation_pushed(Operation::SUBSTRACT);
+        }
+        if(ev.keycode == '*'){
+            operation_pushed(Operation::MULTIPLY);
+        }
+        if(ev.keycode == '/'){
+            operation_pushed(Operation::DIVIDE);
+        }
+        if(ev.keycode == key_enter){
+            operation_pushed(Operation::EQUALS);
+        }
+
+        handle__iterate_focused_by_tab__show(ev);
+        if(ev.keycode == key_escape)
+            _exit = true;
+    }
+    _exit = false;
+
 }

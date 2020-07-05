@@ -45,7 +45,7 @@ void SelectorList::delete_selected(){
 void SelectorList::handle(event ev){
     focus_by_click(ev);
 
-    if(is_focused()){
+    if(_focused){
         if(ev.keycode == key_delete){
             if(_selected_index != -1) delete_selected();
         }
@@ -61,9 +61,15 @@ void SelectorList::handle(event ev){
             _scroll_shift+=20;
         }
     }
-    if(is_focused() && ev.keycode== key_up)
+    if(_targeted){
+        if(ev.button == btn_wheelup)
+            _scroll_shift-=4;
+        if(ev.button == btn_wheeldown)
+            _scroll_shift+=4;
+    }
+    if(_focused && ev.keycode== key_up)
         _selected_index--;
-    if(is_focused() && ev.keycode== key_down)
+    if(_focused && ev.keycode== key_down)
         _selected_index++;
 
     // _scroll_shift, _selected_index adjust, if it became invalid:
@@ -82,10 +88,12 @@ void SelectorList::handle(event ev){
 
 
 
-void SelectorList::show(genv::canvas &c){
+void SelectorList::show(genv::canvas &c) const{
+    c<<move_to(_x,_y)<<color(_bgcol_r, _bgcol_g, _bgcol_b)<<box(_size_x, _size_y);
     canvas canv;
     canv.open(_size_x+1, 5+_items.size()*_leading+1);
     canv.load_font(__fontfile, __fontsize);
+    canv.transparent(true);
 
     // SELECT:
     if(_selected_index != -1){

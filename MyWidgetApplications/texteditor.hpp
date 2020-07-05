@@ -11,7 +11,7 @@ class TextEditor : public Widget{
 public:
     TextEditor(int x, int y, int sx = 140, int sy = 25);
     void handle(genv::event ev) override;
-    void show(genv::canvas &c = genv::gout) override;
+    void show(genv::canvas &c = genv::gout) const override;
 };
 
 #endif // TEXTEDITOR_HPP

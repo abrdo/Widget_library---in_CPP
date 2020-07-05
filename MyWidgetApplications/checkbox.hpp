@@ -14,7 +14,7 @@ public:
     bool is_checked(){ return _checked; }
     void toggle();
     void handle(genv::event ev) override;
-    void show(genv::canvas &c = genv::gout) override;
+    void show(genv::canvas &c = genv::gout) const override;
 
 
 };

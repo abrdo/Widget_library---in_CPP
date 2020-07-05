@@ -1,9 +1,8 @@
 #ifndef CRAFTAPP_HPP
 #define CRAFTAPP_HPP
 
-#include "application.hpp"
+#include "../window.hpp"
 
-#include "application.hpp"
 #include "../numbereditor.hpp"
 #include "../texteditor.hpp"
 #include "../statictext.hpp"
@@ -23,7 +22,7 @@ struct Epitoanyag{
     friend bool operator<(const Epitoanyag &a, const Epitoanyag &b){ return a.nev < b.nev; }
 };
 
-class CraftApp : public Application
+class CraftApp : public Window
 {
     StaticText* raktar_text;
     StaticText* kraftolhato_text;

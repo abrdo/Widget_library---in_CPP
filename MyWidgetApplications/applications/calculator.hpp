@@ -1,7 +1,7 @@
 #ifndef CALCULATOR_HPP
 #define CALCULATOR_HPP
 
-#include "application.hpp"
+#include "../window.hpp"
 #include "../numbereditor.hpp"
 #include "../funcbutton.hpp"
 #include "../statictext.hpp"
@@ -10,7 +10,7 @@
 
 enum Operation {null, ADD, SUBSTRACT, MULTIPLY, DIVIDE, EQUALS};
 
-class Calculator : public Application
+class Calculator : public Window
 {
    // Model ----
     int _op1, _op2; //op2 - current operand under editing; op1 - previous operand
@@ -18,7 +18,7 @@ class Calculator : public Application
     Operation _oper;
     std::string _error_message;
     std::vector<int> _history_op1;
-    int yshift; // used just for displaying
+    bool _op2_is_empty;
 
    // View ----
     // display
@@ -46,28 +46,13 @@ class Calculator : public Application
 
 public:
     Calculator(int window_size_x = 305, int window_size_y = 350);
+    void pop();
     void undo();
     void reset();
     void update();
     void number_pushed(int number);
     void operation_pushed(Operation op);
-
-    static void change(Calculator* pcalc){
-        pcalc->shot_down();
-        //iterator it = pcalc.history.end()--;
-        //*it
-        Calculator csit(900,250); //egyel korábbi app;
-        *pcalc = csit;
-        pcalc->run();
-
-        //Calculator a(700,700);
-        //Calculator c = a;
-        //c.run();
-
-
-        //c = *this;
-        //*this = c;
-    }
+    void run(int timer = 40) override;
 };
 
 #endif // CALCULATOR_HPP

@@ -4,7 +4,7 @@
 using namespace genv;
 using namespace std;
 
-CraftApp::CraftApp(int XX, int YY) : Application(XX,YY){
+CraftApp::CraftApp(int XX, int YY) : Window(XX,YY){
         raktar_text = new StaticText(10, 25,"Raktar:");
         _widgets.push_back(raktar_text);
         raktarL = new SelectorList(10, 50, 100, 100);

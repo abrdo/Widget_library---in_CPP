@@ -1,7 +1,7 @@
 #ifndef WIDGETTESTERAPP_HPP
 #define WIDGETTESTERAPP_HPP
 
-#include "application.hpp"
+#include "../window.hpp"
 
 #include "../checkbox.hpp"
 #include "../statictext.hpp"
@@ -11,7 +11,7 @@
 #include "../funcbutton.hpp"
 
 
-class WidgetTesterApp : public Application{
+class WidgetTesterApp : public Window{
     SelectorList* _sl;
     FuncButton* _b;
 public:

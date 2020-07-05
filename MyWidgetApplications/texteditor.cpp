@@ -10,7 +10,7 @@ TextEditor::TextEditor(int x, int y, int sx, int sy) : Widget(x,y,sx,sy), _text(
 void TextEditor::handle(event ev){
     Widget::focus_by_click(ev);
     // Typing:
-    if(is_focused()){
+    if(_focused){
         if(' ' <= ev.keycode && ev.keycode <= '~' && gout.twidth(_text+" |") < _size_x-6){
             _text += ev.keycode;
         } else if(ev.keycode == key_backspace && _text.size() > 0){
@@ -24,14 +24,15 @@ void TextEditor::handle(event ev){
 
 }
 
-void TextEditor::show(genv::canvas &c){
+void TextEditor::show(genv::canvas &c) const{
+    c<<move_to(_x,_y)<<color(_bgcol_r, _bgcol_g, _bgcol_b)<<box(_size_x, _size_y);
     Widget::show_frame();
     if(_text!="")
-        c<<move_to(_x, _y+_size_y/2-_fonthight/2)<<color(255,255,255)<<text(_text);
+        c<<move_to(_x+3, _y+_size_y/2-_fonthight/2)<<color(255,255,255)<<text(_text);
     else c<<move_to(_x+3, _y+3)<<color(255,255,255);
-    if(is_focused() && _cursor_visible)
+    if(_focused && _cursor_visible)
         c<<text("|");
-    if(_text == "" && is_focusable())
+    if(_text == "" && _focusable)
         _text_if_empty.show();
 
 }

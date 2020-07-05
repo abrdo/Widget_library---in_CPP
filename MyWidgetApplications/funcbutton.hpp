@@ -16,7 +16,7 @@ public:
     FuncButton(int x, int y, std::string label, std::function<void()> func, int sx = 100, int sy = 25);
 
     void handle(genv::event ev) override;
-    void show(genv::canvas &c = genv::gout) override;
+    void show(genv::canvas &c = genv::gout) const override;
 
 };
 

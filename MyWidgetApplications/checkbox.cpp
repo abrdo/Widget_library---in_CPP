@@ -16,17 +16,18 @@ void CheckBox::handle(event ev){
     Widget::focus_by_click(ev);
     //checked:
     if(Widget::focusing_click(ev)
-       || (is_focused() && (ev.keycode == key_enter || ev.keycode == ' '))
+       || (_focused && (ev.keycode == key_enter || ev.keycode == ' '))
        )
 
         CheckBox::toggle();
 }
 
 
-void CheckBox::show(genv::canvas &c){
+void CheckBox::show(genv::canvas &c) const{
+    c<<move_to(_x,_y)<<color(_bgcol_r, _bgcol_g, _bgcol_b)<<box(_size_x, _size_y);
     Widget::show_frame();
     if(_checked){
-        if(!is_focusable()) c<<color(130,130,130);
+        if(!_focusable) c<<color(130,130,130);
         else c<<color(255,255,255);
         c<<move_to(_x+4, _y+5)<<line(_size_x-9, _size_y-9);
         c<<move_to(_x+5, _y+5)<<line(_size_x-9, _size_y-9);

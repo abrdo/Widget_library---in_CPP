@@ -3,7 +3,7 @@ using namespace genv;
 using namespace std;
 
 
-WidgetTesterApp::WidgetTesterApp(int XX, int YY) : Application(XX,YY){
+WidgetTesterApp::WidgetTesterApp(int XX, int YY) : Window(XX,YY){
     _widgets.push_back(new NumberEditor(10,10, 200, 25, true, -22, 100));
     _widgets.push_back(new NumberEditor(10,60, true, -22, 100, true));
     _widgets.push_back(new NumberEditor(10,110));
@@ -19,7 +19,7 @@ WidgetTesterApp::WidgetTesterApp(int XX, int YY) : Application(XX,YY){
     _b = new FuncButton(400, 200, "Button", [](){});
     _widgets.push_back(_b);
 
-    for (string s : {"Lili","Kata", "Anna", "Steve", "Peti", "Zsuzsi", "Cili", "Janos", "Peter"}){
+    for (string s : {"Lili","Kata", "Anna", "Steve", "Peti", "Zsuzsi", "Cili", "Janos", "Peter", "Zsuzsi", "Cili", "Janos", "Peter", "Zsuzsi", "Cili", "Janos", "Peter"}){
         _sl->new_item(s);
     }
 }

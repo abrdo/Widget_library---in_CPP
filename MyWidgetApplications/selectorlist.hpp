@@ -23,7 +23,7 @@ public:
     void delete_selected();
 
     void handle(genv::event ev) override;
-    void show(genv::canvas &c = genv::gout) override;
+    void show(genv::canvas &c = genv::gout) const override;
 
 
     bool selection(){return _selected_index != -1;}
