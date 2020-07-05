@@ -72,9 +72,11 @@ void Calculator::undo(){
 
 void Calculator::pop(){
     _op2 = _op2W->get_number();
+    _op2_is_empty = _op2W->is_empty();
     _op2 /= 10;
     if(_op2==0)
-        _op2_is_empty = true; update();
+        _op2_is_empty = true;
+        update();
 }
 
 void Calculator::reset(){
