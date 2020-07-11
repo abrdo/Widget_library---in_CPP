@@ -10,7 +10,7 @@ class Window;
 
 
 class Widget{
-public:
+protected:
     int _x, _y, _size_x, _size_y;
     Window* _window; // the window what contains this widget. (not necessary to provide with value to use a widget properly)
 
@@ -49,8 +49,37 @@ public:
     bool focusing_click(genv::event ev) const;
     void focus_by_click(genv::event ev);
 
-    // ------------------------------------------------------------------------------
+    inline bool is_inside(int px, int py, int x1, int x2, int y1, int y2) {return x1<=px && px<=x2 && y1<=py && py<=y2;} //is (px, py) in a rectangle?
 
+    // --------------------CONVERTERS----------------------------------------------------------
+    /*
+    template <typename T>
+    static std::string to_str(T num){
+        std::stringstream ss;
+        ss<<num;
+        std::string s;
+        ss>>s;
+        return s;
+    }
+
+    template <typename T>
+    static T to_num(std::string s){
+        std::stringstream ss;
+        ss<<s;
+        T i;
+        ss>>i;
+        return i;
+    }
+
+    template <typename T>
+    static char to_char(T num){
+        std::stringstream ss;
+        ss<<num;
+        char ch;
+        ss>>ch;
+        return ch;
+    }
+    */
 
     static std::string to_str(int i){
         std::stringstream ss;
@@ -68,10 +97,31 @@ public:
         return i;
     }
 
-    inline bool is_inside(int px, int py, int x1, int x2, int y1, int y2){ //is (px, py) in a rectangle?
-        return x1<=px && px<=x2 && y1<=py && py<=y2;
+    static char to_char(int i){
+        std::stringstream ss;
+        ss<<i;
+        char ch;
+        ss>>ch;
+        return ch;
+    }
+/*
+    // DOUBLE - STRING CONVERTERS:
+    static std::string to_str(double d){
+        std::stringstream ss;
+        ss<<d;
+        std::string s;
+        ss>>s;
+        return s;
     }
 
+    static double to_double(std::string s){
+        std::stringstream ss;
+        ss<<s;
+        double d;
+        ss>>d;
+        return d;
+    }
+*/
 };
 
 #endif // WIDGET_HPP

@@ -40,8 +40,12 @@
 			<Add library="lib/libSDLmain.a" />
 			<Add directory="lib" />
 		</Linker>
+		<Unit filename="applications/accountingapp.cpp" />
+		<Unit filename="applications/accountingapp.hpp" />
 		<Unit filename="applications/calculator.cpp" />
 		<Unit filename="applications/calculator.hpp" />
+		<Unit filename="applications/carrentingapp.cpp" />
+		<Unit filename="applications/carrentingapp.hpp" />
 		<Unit filename="applications/craftapp.cpp" />
 		<Unit filename="applications/craftapp.hpp" />
 		<Unit filename="applications/widgettesterapp.cpp" />

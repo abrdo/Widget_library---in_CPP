@@ -16,7 +16,7 @@ void Window::iterate_focused_by_tab(event ev){
     if(ev.keycode == key_tab && _widgets.size()!=0){
         int prev_focused;
         for(int i = 0; i<_widgets.size(); i++){
-            if(_widgets[i]->_focused){
+            if(_widgets[i]->is_focused()){
                 _widgets[i]->set_focused(false);
                 prev_focused = i;
                 break;

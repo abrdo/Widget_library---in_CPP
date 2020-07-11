@@ -30,27 +30,18 @@ void SelectorList::delete_selected(){
             _items[i]->set_y(_items[i-1]->get_y());
         }
         // deletion:
-        delete _items[_selected_index];
-        _items[_selected_index] = 0;
-        for(int i = _selected_index; i<_items.size()-1; i++){
-            _items[i]= _items[i+1];
-        }
-        _items.resize(_items.size()-1);
+        _items.erase(_items.begin()+_selected_index);
         _selected_index = -1;
     }
     else cerr<<"warning: Can't delete, because there is no selection from the SelectorList."<<endl;
-
 }
 
 void SelectorList::handle(event ev){
     focus_by_click(ev);
-
-    if(_focused){
-        if(ev.keycode == key_delete){
-            if(_selected_index != -1) delete_selected();
-        }
-    }
-
+    /*
+    if(ev.keycode == key_delete)
+        delete_selected();
+    */
     if(focusing_click(ev)){
         if(ev.pos_x<_x+_size_x-22){
             int new_sel_ind = (ev.pos_y + _scroll_shift -_y-5)/_leading;
@@ -67,7 +58,7 @@ void SelectorList::handle(event ev){
         if(ev.button == btn_wheeldown)
             _scroll_shift+=4;
     }
-    if(_focused && ev.keycode== key_up)
+    if(_focused && ev.keycode== key_up && _selected_index != 0)
         _selected_index--;
     if(_focused && ev.keycode== key_down)
         _selected_index++;
@@ -80,10 +71,9 @@ void SelectorList::handle(event ev){
     else if(_scroll_shift > _items.size()*_leading+10 - _size_y)
         _scroll_shift = _items.size()*_leading+10 - _size_y;
     if(_selected_index < -1)
-        _selected_index = 0;
-    else if(_selected_index > _items.size()-1)
+        _selected_index = -1;
+    else if(_selected_index > _items.size()-1 && _selected_index != -1)
         _selected_index = _items.size()-1;
-
 }
 
 
@@ -97,11 +87,12 @@ void SelectorList::show(genv::canvas &c) const{
 
     // SELECT:
     if(_selected_index != -1){
-        canv<<color(255,255,0)
-            <<move_to(4, 5 + _selected_index*(_leading))<<box(_size_x-8, _leading);
+        if(_focused)canv<<color(240,240,0);
+        else        canv<<color(0.8*240 + 0.2*_bgcol_r,  0.8*240 + 0.2*_bgcol_g,  0.8*0 + 0.2*_bgcol_b);
+        canv<<move_to(4, 5 + _selected_index*(_leading))<<box(_size_x-8, _leading);
     }
     // LIST:
-    if(_selected_index != -1) _items[_selected_index]->set_rgb(70,70,70);
+    if(_selected_index != -1) _items[_selected_index]->set_rgb(50,50,50);
     for(auto item : _items){
         item->show(canv);
     }

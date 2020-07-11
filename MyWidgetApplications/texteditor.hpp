@@ -12,6 +12,7 @@ public:
     TextEditor(int x, int y, int sx = 140, int sy = 25);
     void handle(genv::event ev) override;
     void show(genv::canvas &c = genv::gout) const override;
+    std::string get_text(){  return _text; }
 };
 
 #endif // TEXTEDITOR_HPP

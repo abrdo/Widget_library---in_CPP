@@ -6,7 +6,13 @@ using namespace std;
 using namespace genv;
 
 FuncButton::FuncButton(int x, int y, std::string label, std::function<void()> func, int sx, int sy)
-                    : Widget(x,y,sx,sy), _f(func), _label(label), _pushed(false){}
+                    : Widget(x,y,sx,sy), _f(func), _label(label), _pushed(false){
+    //25, 25, 40
+    _bgcol_r *= 0.8;
+    _bgcol_g *= 0.8;
+    _bgcol_b *= 0.8;
+
+}
 
 void FuncButton::handle(genv::event ev){
     focus_by_click(ev);
@@ -28,6 +34,6 @@ void FuncButton::show(genv::canvas &c) const{
     if(!_focusable) c<<color(130,130,130);
     else if(_pushed) c<<color(90,90,90);
     else c<<color(255,255,255);
-    c << move_to(_x+_size_x/2-c.twidth(_label)/2, _y+_size_y/2-_fonthight/2)<< text(_label);
+    c << move_to(_x+_size_x/2-c.twidth(_label)/2, _y+_size_y/2-_fonthight/2)<<text(_label);
     show_frame(c);
 }

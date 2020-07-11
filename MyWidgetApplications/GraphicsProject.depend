@@ -673,7 +673,7 @@
 	"../widget.hpp"
 	<vector>
 
-1593983102 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\mywidgetapplications\widget.hpp
+1594407508 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\mywidgetapplications\widget.hpp
 	"graphics.hpp"
 	"../window.hpp"
 	<sstream>
@@ -712,17 +712,17 @@
 	"../funcbutton.hpp"
 	<map>
 
-1593980400 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\mywidgetapplications\numbereditor.hpp
+1594422915 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\mywidgetapplications\numbereditor.hpp
 	"widget.hpp"
 
-1593970181 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\mywidgetapplications\texteditor.hpp
+1594423003 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\mywidgetapplications\texteditor.hpp
 	"widget.hpp"
 	"statictextcomp.hpp"
 
 1593972836 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\mywidgetapplications\statictext.hpp
 	"widget.hpp"
 
-1593970232 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\mywidgetapplications\selectorlist.hpp
+1594473572 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\mywidgetapplications\selectorlist.hpp
 	"widget.hpp"
 	"statictextcomp.hpp"
 	<vector>
@@ -751,21 +751,21 @@
 	"checkbox.hpp"
 	<iostream>
 
-1593987378 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\mywidgetapplications\funcbutton.cpp
+1594478883 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\mywidgetapplications\funcbutton.cpp
 	"graphics.hpp"
 	"funcbutton.hpp"
 	<iostream>
 
-1593988828 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\mywidgetapplications\main.cpp
-	"applications/calculator.hpp"
-	"applications/widgettesterapp.hpp"
+1594474695 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\mywidgetapplications\main.cpp
+	"applications/accountingapp.hpp"
+	<iostream>
 
 1593980400 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\mywidgetapplications\numbereditor.cpp
 	"numbereditor.hpp"
 	<iostream>
 	<ctime>
 
-1593970256 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\mywidgetapplications\selectorlist.cpp
+1594496470 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\mywidgetapplications\selectorlist.cpp
 	"selectorlist.hpp"
 	<iostream>
 	<vector>
@@ -779,7 +779,7 @@
 	<iostream>
 	<ctime>
 
-1593970271 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\mywidgetapplications\widget.cpp
+1594478767 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\mywidgetapplications\widget.cpp
 	"widget.hpp"
 	<iostream>
 
@@ -798,7 +798,7 @@
 	"../../widget.hpp"
 	"graphics.hpp"
 
-1593987766 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\mywidgetapplications\applications\calculator.cpp
+1594214105 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\mywidgetapplications\applications\calculator.cpp
 	"calculator.hpp"
 	<iostream>
 	<math.h>
@@ -828,7 +828,58 @@
 	"../widget.hpp"
 	<vector>
 
-1593976412 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\mywidgetapplications\window.cpp
+1594257121 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\mywidgetapplications\window.cpp
 	"window.hpp"
+	<iostream>
+
+1594212361 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\mywidgetapplications\calculatorfloat.cpp
+	"calculatorfloat.hpp"
+
+1594212361 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\mywidgetapplications\calculatorfloat.hpp
+
+1594221257 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\mywidgetapplications\numbereditorfloat.cpp
+	"numbereditorfloat.hpp"
+	<iostream>
+	<ctime>
+
+1594221257 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\mywidgetapplications\numbereditorfloat.hpp
+	"widget.hpp"
+
+1594221602 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\mywidgetapplications\applications\calculatorfloat.cpp
+	"calculatorfloat.hpp"
+	<iostream>
+
+1594216387 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\mywidgetapplications\applications\calculatorfloat.hpp
+	"../window.hpp"
+	"../numbereditorfloat.hpp"
+	"../funcbutton.hpp"
+	"../statictext.hpp"
+	<vector>
+	<map>
+	"calculator.hpp"
+
+1594424794 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\mywidgetapplications\accountingapp.hpp
+	"window.hpp"
+	"texteditor.hpp"
+	"numbereditor.hpp"
+	"statictext.hpp"
+	"selectorlist.hpp"
+	"funcbutton.hpp"
+	<vector>
+
+1594425326 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\mywidgetapplications\accountingapp.cpp
+	"accountingapp.hpp"
+
+1594474660 c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\mywidgetapplications\applications\accountingapp.hpp
+	"../window.hpp"
+	"../texteditor.hpp"
+	"../numbereditor.hpp"
+	"../statictext.hpp"
+	"../selectorlist.hpp"
+	"../funcbutton.hpp"
+	<vector>
+
+1594497432 source:c:\users\domonkos\documents\ppke itk tanulmányok\mérnökinfó msc\1. félév (tavasz)\bevprog2\applications\mywidgetapplications\applications\accountingapp.cpp
+	"accountingapp.hpp"
 	<iostream>
 

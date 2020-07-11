@@ -20,6 +20,7 @@ public:
     void set_number(int num){ _snum = Widget::to_str(num); }
     void set_text(std::string snum){ _snum = snum; }
     int get_number(){ if(is_empty()) return 0; else return Widget::to_int(_snum); }
+    std::string get_text(){ if(is_empty()) return ""; else return _snum; }
     bool is_empty(){ return _snum == ""; }
     void set_possibility_to_type_minus(bool poss){_possible_to_type_minus = poss;}
 

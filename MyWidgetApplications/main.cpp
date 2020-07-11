@@ -1,14 +1,12 @@
-#include "applications/calculator.hpp"
-#include "applications/widgettesterapp.hpp"
+#include "applications/accountingapp.hpp"
+#include <iostream>
 
 using namespace std;
-using namespace genv;
 
 
 int main(){
-    Calculator mycalculator;
-    mycalculator.run();
-
+    AccountingApp myapp;
+    myapp.run();
     return 0;
 }
 

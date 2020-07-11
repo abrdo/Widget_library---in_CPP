@@ -7,12 +7,12 @@ Widget::Widget(int x, int y, int sx, int sy, int fontsize, Window* win) :
         _targeted(false), _focused(false), _focusable(true),
         __fontsize(fontsize), /*default=14*/
         __fontfile("LiberationSans-Regular.ttf"),
-        _fonthight(genv::gout.cascent()+genv::gout.cdescent()),
         _frame_r(200), _frame_g(200),_frame_b(200),
-        _bgcol_r(25), _bgcol_g(25), _bgcol_b(40),
+        _bgcol_r(35), _bgcol_g(35), _bgcol_b(55),
         _window(win)
 {
     gout.load_font(__fontfile, __fontsize); //size - hight in pixels : [14 - 15 px]
+    _fonthight = genv::gout.cascent()+genv::gout.cdescent();
     /* hatter legyen az app hattere:
     if(_window){
         _bgcol_r = _window->_bgcol_r;

@@ -17,17 +17,21 @@ class SelectorList : public Widget{
 public:
     SelectorList(int x, int y, int sx, int sy);
     ~SelectorList();
-    std::string get_selected(){if(_selected_index!=-1) return _items[_selected_index]->_text; else return "ERR";}
+
+    std::string get_selected(){if(_selected_index!=-1) return _items[_selected_index]->_text; else return "__ERR__";}
+    int get_selected_index() { return _selected_index; }
+    void set_selected_index(int index) { _selected_index = index;}
 
     void new_item(std::string itemtext);
     void delete_selected();
+    void clear(){_items.clear();}
 
     void handle(genv::event ev) override;
     void show(genv::canvas &c = genv::gout) const override;
 
 
     bool selection(){return _selected_index != -1;}
-    int disp_items_size(){return _items.size()*_leading;};
+    int disp_items_size(){return _items.size()*_leading;} // items-canvas y-length
 };
 
 #endif // SELECTORLIST_HPP
