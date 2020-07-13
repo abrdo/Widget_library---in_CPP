@@ -1,0 +1,176 @@
+\hypertarget{classdowi_1_1_widget}{}\doxysection{dowi\+::Widget Class Reference}
+\label{classdowi_1_1_widget}\index{dowi::Widget@{dowi::Widget}}
+
+
+the \mbox{\hyperlink{classdowi_1_1_widget}{Widget}} base class  
+
+
+
+
+{\ttfamily \#include $<$widget.\+hpp$>$}
+
+Inheritance diagram for dowi\+::Widget\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.159420cm]{classdowi_1_1_widget}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdowi_1_1_widget_aed991a7d7d6bbb783222dafec83cee9a}\label{classdowi_1_1_widget_aed991a7d7d6bbb783222dafec83cee9a}} 
+{\bfseries Widget} (int x, int y, int sx, int sy, int fontsize=14, \mbox{\hyperlink{classdowi_1_1_window}{Window}} $\ast$window=0)
+\item 
+\mbox{\Hypertarget{classdowi_1_1_widget_a2ab1c3e1e7eaf7bd95997712a9db0c64}\label{classdowi_1_1_widget_a2ab1c3e1e7eaf7bd95997712a9db0c64}} 
+{\bfseries Widget} (int x, int y, int sx, int sy, unsigned char backgroundcolor\+\_\+r, unsigned char backgroundcolor\+\_\+g, unsigned char backgroundcolor\+\_\+b)
+\item 
+\mbox{\Hypertarget{classdowi_1_1_widget_afcb76105a21f77f3b5c3ccdcf02a2a20}\label{classdowi_1_1_widget_afcb76105a21f77f3b5c3ccdcf02a2a20}} 
+bool {\bfseries is\+\_\+focused} ()
+\item 
+\mbox{\Hypertarget{classdowi_1_1_widget_a54f625a17781ee1b4cad3f052f43f6e0}\label{classdowi_1_1_widget_a54f625a17781ee1b4cad3f052f43f6e0}} 
+void {\bfseries set\+\_\+focused} (bool f)
+\item 
+\mbox{\Hypertarget{classdowi_1_1_widget_ae09646ef09de2a6d702b14929e674d5a}\label{classdowi_1_1_widget_ae09646ef09de2a6d702b14929e674d5a}} 
+bool {\bfseries is\+\_\+focusable} ()
+\item 
+\mbox{\Hypertarget{classdowi_1_1_widget_a5de530a4a40f37c78290751d726b38c2}\label{classdowi_1_1_widget_a5de530a4a40f37c78290751d726b38c2}} 
+void {\bfseries set\+\_\+focusable} (bool f)
+\item 
+\mbox{\Hypertarget{classdowi_1_1_widget_ae4d7c9ff31f50d6cbc0f27d7a3d50c63}\label{classdowi_1_1_widget_ae4d7c9ff31f50d6cbc0f27d7a3d50c63}} 
+void {\bfseries set\+\_\+color} (unsigned char r, unsigned char g, unsigned char b)
+\item 
+\mbox{\Hypertarget{classdowi_1_1_widget_a1b302319742b9932635e59d7f25b9a10}\label{classdowi_1_1_widget_a1b302319742b9932635e59d7f25b9a10}} 
+std\+::map$<$ char, unsigned char $>$ {\bfseries get\+\_\+frame\+\_\+color} ()
+\item 
+\mbox{\Hypertarget{classdowi_1_1_widget_ae8a4994e6e7c2787d655a783cd1085bb}\label{classdowi_1_1_widget_ae8a4994e6e7c2787d655a783cd1085bb}} 
+void {\bfseries set\+\_\+frame\+\_\+color} (unsigned char r, unsigned char g, unsigned char b)
+\item 
+\mbox{\Hypertarget{classdowi_1_1_widget_a6a248a36482bbf05f5f8510d01f469a9}\label{classdowi_1_1_widget_a6a248a36482bbf05f5f8510d01f469a9}} 
+bool {\bfseries mouse\+\_\+above} (genv\+::event ev) const
+\item 
+\mbox{\Hypertarget{classdowi_1_1_widget_a96989e2c533044f743563dc24cf65df4}\label{classdowi_1_1_widget_a96989e2c533044f743563dc24cf65df4}} 
+virtual void {\bfseries handle} (genv\+::event ev)=0
+\item 
+virtual void \mbox{\hyperlink{classdowi_1_1_widget_a675d4ed2ad74bf50f944e80026e2eb8d}{show}} (genv\+::canvas \&c=genv\+::gout) const =0
+\begin{DoxyCompactList}\small\item\em visualize the widget \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdowi_1_1_widget_a0286124ead1003df1881eb44598c8232}\label{classdowi_1_1_widget_a0286124ead1003df1881eb44598c8232}} 
+void {\bfseries show\+\_\+frame} (genv\+::canvas \&c=genv\+::gout) const
+\item 
+\mbox{\Hypertarget{classdowi_1_1_widget_a4ec4cde3c0ff78daa436052be1c7dcc4}\label{classdowi_1_1_widget_a4ec4cde3c0ff78daa436052be1c7dcc4}} 
+bool {\bfseries focusing\+\_\+click} (genv\+::event ev) const
+\item 
+\mbox{\Hypertarget{classdowi_1_1_widget_a9a0b7f13f2526b904f01ec329d2ca4f8}\label{classdowi_1_1_widget_a9a0b7f13f2526b904f01ec329d2ca4f8}} 
+void {\bfseries focus\+\_\+by\+\_\+click} (genv\+::event ev)
+\item 
+\mbox{\Hypertarget{classdowi_1_1_widget_af9aec3184971ad9073cde9606fdeb1e3}\label{classdowi_1_1_widget_af9aec3184971ad9073cde9606fdeb1e3}} 
+bool {\bfseries is\+\_\+inside} (int px, int py, int x1, int x2, int y1, int y2)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdowi_1_1_widget_abe2c9456343a7321fed8951b9eada81d}\label{classdowi_1_1_widget_abe2c9456343a7321fed8951b9eada81d}} 
+static std\+::string {\bfseries to\+\_\+str} (int i)
+\item 
+\mbox{\Hypertarget{classdowi_1_1_widget_a5acc5cd21342c5cc29016229e25de3d1}\label{classdowi_1_1_widget_a5acc5cd21342c5cc29016229e25de3d1}} 
+static int {\bfseries to\+\_\+int} (std\+::string s)
+\item 
+\mbox{\Hypertarget{classdowi_1_1_widget_ac9d0ea4ccc00e722ecd316f1890bb1f8}\label{classdowi_1_1_widget_ac9d0ea4ccc00e722ecd316f1890bb1f8}} 
+static char {\bfseries to\+\_\+char} (int i)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdowi_1_1_widget_aca193c5acc03ebeac2faee35f33399ce}\label{classdowi_1_1_widget_aca193c5acc03ebeac2faee35f33399ce}} 
+int {\bfseries \+\_\+x}
+\item 
+\mbox{\Hypertarget{classdowi_1_1_widget_aaf4adf3f69996592ae00ab3608822edd}\label{classdowi_1_1_widget_aaf4adf3f69996592ae00ab3608822edd}} 
+int \mbox{\hyperlink{classdowi_1_1_widget_aaf4adf3f69996592ae00ab3608822edd}{\+\_\+y}}
+\begin{DoxyCompactList}\small\item\em the x, y coordinates of the top-\/left corner of the widget \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdowi_1_1_widget_a7961ee94cadb5ca485b9ffd51fb72fbd}\label{classdowi_1_1_widget_a7961ee94cadb5ca485b9ffd51fb72fbd}} 
+int {\bfseries \+\_\+size\+\_\+x}
+\item 
+\mbox{\Hypertarget{classdowi_1_1_widget_a8ddf41a02d3311a166b7f8d5105b38b9}\label{classdowi_1_1_widget_a8ddf41a02d3311a166b7f8d5105b38b9}} 
+int \mbox{\hyperlink{classdowi_1_1_widget_a8ddf41a02d3311a166b7f8d5105b38b9}{\+\_\+size\+\_\+y}}
+\begin{DoxyCompactList}\small\item\em the width (\+\_\+size\+\_\+x) and the hight (\+\_\+size\+\_\+y) of the widget \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdowi_1_1_widget_a562e3db4d96d6e04745dfe20dfc57df7}\label{classdowi_1_1_widget_a562e3db4d96d6e04745dfe20dfc57df7}} 
+\mbox{\hyperlink{classdowi_1_1_window}{Window}} $\ast$ \mbox{\hyperlink{classdowi_1_1_widget_a562e3db4d96d6e04745dfe20dfc57df7}{\+\_\+window}}
+\begin{DoxyCompactList}\small\item\em the window what contains this widget. (not necessary to provide with value to use a widget properly) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdowi_1_1_widget_a5972c3ae634f915f17a3aee4e54ff55b}\label{classdowi_1_1_widget_a5972c3ae634f915f17a3aee4e54ff55b}} 
+bool \mbox{\hyperlink{classdowi_1_1_widget_a5972c3ae634f915f17a3aee4e54ff55b}{\+\_\+focused}}
+\begin{DoxyCompactList}\small\item\em is the widget in focus \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdowi_1_1_widget_aad16dc3a16fac90babb217937a323673}\label{classdowi_1_1_widget_aad16dc3a16fac90babb217937a323673}} 
+bool \mbox{\hyperlink{classdowi_1_1_widget_aad16dc3a16fac90babb217937a323673}{\+\_\+focusable}}
+\begin{DoxyCompactList}\small\item\em is the widget focusable \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdowi_1_1_widget_ae6383a914da4b5909a7e15cc84b483b7}\label{classdowi_1_1_widget_ae6383a914da4b5909a7e15cc84b483b7}} 
+bool \mbox{\hyperlink{classdowi_1_1_widget_ae6383a914da4b5909a7e15cc84b483b7}{\+\_\+targeted}}
+\begin{DoxyCompactList}\small\item\em It is true if the widget is focusable and the mouse is over it. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdowi_1_1_widget_a8741306ba4b550f524caa9159427284d}\label{classdowi_1_1_widget_a8741306ba4b550f524caa9159427284d}} 
+int \mbox{\hyperlink{classdowi_1_1_widget_a8741306ba4b550f524caa9159427284d}{\+\_\+fonthight}}
+\begin{DoxyCompactList}\small\item\em the fonhight of the fonts used by the widget (if it uses fonts by the visualization) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdowi_1_1_widget_a3b98e37897f326bbc2f66388a638f9fb}\label{classdowi_1_1_widget_a3b98e37897f326bbc2f66388a638f9fb}} 
+std\+::string \mbox{\hyperlink{classdowi_1_1_widget_a3b98e37897f326bbc2f66388a638f9fb}{\+\_\+\+\_\+fontfile}}
+\begin{DoxyCompactList}\small\item\em The name of the fontfile from witch the fonts readed. It must exist in the project folder with \textquotesingle{}.ttf\textquotesingle{} extension. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdowi_1_1_widget_a2450de433d2f6b0929fdb9d7304c3a5e}\label{classdowi_1_1_widget_a2450de433d2f6b0929fdb9d7304c3a5e}} 
+int \mbox{\hyperlink{classdowi_1_1_widget_a2450de433d2f6b0929fdb9d7304c3a5e}{\+\_\+\+\_\+fontsize}}
+\begin{DoxyCompactList}\small\item\em The fontsize of the visualized text. (the \+\_\+\+\_\+fontfile must support this fontsize) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdowi_1_1_widget_a72923549f9d5f2681586463b70fdcb59}\label{classdowi_1_1_widget_a72923549f9d5f2681586463b70fdcb59}} 
+unsigned char {\bfseries \+\_\+r}
+\item 
+\mbox{\Hypertarget{classdowi_1_1_widget_a75e2a1ea76c2b37f6456887a41a608d1}\label{classdowi_1_1_widget_a75e2a1ea76c2b37f6456887a41a608d1}} 
+unsigned char {\bfseries \+\_\+g}
+\item 
+\mbox{\Hypertarget{classdowi_1_1_widget_a9bbb32120d62d3ec625c5e5442795eb7}\label{classdowi_1_1_widget_a9bbb32120d62d3ec625c5e5442795eb7}} 
+unsigned char \mbox{\hyperlink{classdowi_1_1_widget_a9bbb32120d62d3ec625c5e5442795eb7}{\+\_\+b}}
+\begin{DoxyCompactList}\small\item\em the R\+GB color values of the widget. The meaning of color -\/ if exists at all -\/ is various by the different widgets. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdowi_1_1_widget_a560a8adcffc7649b124f9141ef2d5734}\label{classdowi_1_1_widget_a560a8adcffc7649b124f9141ef2d5734}} 
+unsigned char {\bfseries \+\_\+bgcol\+\_\+r}
+\item 
+\mbox{\Hypertarget{classdowi_1_1_widget_ad7c3a0e3ecf532ad78c1e634137cf942}\label{classdowi_1_1_widget_ad7c3a0e3ecf532ad78c1e634137cf942}} 
+unsigned char {\bfseries \+\_\+bgcol\+\_\+g}
+\item 
+\mbox{\Hypertarget{classdowi_1_1_widget_a32a46bda35dd80814befa0edadaff03a}\label{classdowi_1_1_widget_a32a46bda35dd80814befa0edadaff03a}} 
+unsigned char \mbox{\hyperlink{classdowi_1_1_widget_a32a46bda35dd80814befa0edadaff03a}{\+\_\+bgcol\+\_\+b}}
+\begin{DoxyCompactList}\small\item\em the base background-\/color of the widget \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdowi_1_1_widget_a8d9e654f3bc5d4ca22eb14aa82ee42cf}\label{classdowi_1_1_widget_a8d9e654f3bc5d4ca22eb14aa82ee42cf}} 
+unsigned char {\bfseries \+\_\+frame\+\_\+r}
+\item 
+\mbox{\Hypertarget{classdowi_1_1_widget_a5f66379c24158a460eaf0a8e33425aa7}\label{classdowi_1_1_widget_a5f66379c24158a460eaf0a8e33425aa7}} 
+unsigned char {\bfseries \+\_\+frame\+\_\+g}
+\item 
+\mbox{\Hypertarget{classdowi_1_1_widget_a5ea2172457baf7a9c04ebecaedfb03e2}\label{classdowi_1_1_widget_a5ea2172457baf7a9c04ebecaedfb03e2}} 
+unsigned char \mbox{\hyperlink{classdowi_1_1_widget_a5ea2172457baf7a9c04ebecaedfb03e2}{\+\_\+frame\+\_\+b}}
+\begin{DoxyCompactList}\small\item\em the color of the frame of the widget \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+the \mbox{\hyperlink{classdowi_1_1_widget}{Widget}} base class 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdowi_1_1_widget_a675d4ed2ad74bf50f944e80026e2eb8d}\label{classdowi_1_1_widget_a675d4ed2ad74bf50f944e80026e2eb8d}} 
+\index{dowi::Widget@{dowi::Widget}!show@{show}}
+\index{show@{show}!dowi::Widget@{dowi::Widget}}
+\doxysubsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily virtual void dowi\+::\+Widget\+::show (\begin{DoxyParamCaption}\item[{genv\+::canvas \&}]{c = {\ttfamily genv\+:\+:gout} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+visualize the widget 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & the genv\+::canvas type canvas to which you would like to draw the widget. The default gout is the standard graphical output. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+Do not use visualization in other function. Violation of this rule endanger the thread-\/safety. 
+\end{DoxyWarning}
+
+
+Implemented in \mbox{\hyperlink{classdowi_1_1_selector_list_a45b05a60ffe9caecf09ea4493cb23e2b}{dowi\+::\+Selector\+List}}, \mbox{\hyperlink{classdowi_1_1_func_button_ae177b46f877358b17056a75e1d987ee4}{dowi\+::\+Func\+Button}}, \mbox{\hyperlink{classdowi_1_1_number_editor_a3c6aa784339b66a0d984b427974fd1d3}{dowi\+::\+Number\+Editor}}, \mbox{\hyperlink{classdowi_1_1_check_box_ad09193ca039e2579bab1e58eb38d09b9}{dowi\+::\+Check\+Box}}, \mbox{\hyperlink{structdowi_1_1_static_text_a453d628d8b9ee334aae8f173fa6e5386}{dowi\+::\+Static\+Text}}, \mbox{\hyperlink{structdowi_1_1_static_text_comp_a97a0a94a598ef714b27936ef39cd1350}{dowi\+::\+Static\+Text\+Comp}}, and \mbox{\hyperlink{classdowi_1_1_text_editor_ad68e493b7aa6e925229b708588835a10}{dowi\+::\+Text\+Editor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+widget.\+hpp\item 
+widget.\+cpp\end{DoxyCompactItemize}

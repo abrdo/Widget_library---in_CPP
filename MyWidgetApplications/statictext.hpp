@@ -3,6 +3,8 @@
 
 #include "widget.hpp"
 
+namespace dowi{
+
 struct StaticText : public Widget
 {
     std::string _text;
@@ -20,4 +22,5 @@ struct StaticText : public Widget
     //void set_focusable(bool f) override;
 };
 
+} // namespace
 #endif // STATICTEXT_HPP

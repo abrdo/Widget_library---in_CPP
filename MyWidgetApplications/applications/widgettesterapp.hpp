@@ -11,9 +11,9 @@
 #include "../funcbutton.hpp"
 
 
-class WidgetTesterApp : public Window{
-    SelectorList* _sl;
-    FuncButton* _b;
+class WidgetTesterApp : public dowi::Window{
+    dowi::SelectorList* _sl;
+    dowi::FuncButton* _b;
 public:
     WidgetTesterApp(int XX = 800, int YY = 400);
 };

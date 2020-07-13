@@ -2,6 +2,7 @@
 #include <iostream>
 using namespace std;
 using namespace genv;
+using namespace dowi;
 
 
 Window::Window(int XX, int YY) : _XX(XX), _YY(YY), _focused(-1), _exit(false),

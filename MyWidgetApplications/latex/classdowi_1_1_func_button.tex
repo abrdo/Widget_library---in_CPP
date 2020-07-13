@@ -1,0 +1,63 @@
+\hypertarget{classdowi_1_1_func_button}{}\doxysection{dowi\+::Func\+Button Class Reference}
+\label{classdowi_1_1_func_button}\index{dowi::FuncButton@{dowi::FuncButton}}
+Inheritance diagram for dowi\+::Func\+Button\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classdowi_1_1_func_button}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdowi_1_1_func_button_a745d654d40cf0bb3f163a91333288ca0}\label{classdowi_1_1_func_button_a745d654d40cf0bb3f163a91333288ca0}} 
+{\bfseries Func\+Button} (int x, int y, std\+::string label, std\+::function$<$ void()$>$ func, int sx=100, int sy=25)
+\item 
+\mbox{\Hypertarget{classdowi_1_1_func_button_a9f15414d6aeb94a4ef821b6b0618ad40}\label{classdowi_1_1_func_button_a9f15414d6aeb94a4ef821b6b0618ad40}} 
+void {\bfseries handle} (genv\+::event ev) override
+\item 
+void \mbox{\hyperlink{classdowi_1_1_func_button_ae177b46f877358b17056a75e1d987ee4}{show}} (genv\+::canvas \&c=genv\+::gout) const override
+\begin{DoxyCompactList}\small\item\em visualize the widget \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdowi_1_1_func_button_a8f006cf3aa38cbadf2addb8dd5e6dab3}\label{classdowi_1_1_func_button_a8f006cf3aa38cbadf2addb8dd5e6dab3}} 
+std\+::function$<$ void()$>$ {\bfseries \+\_\+f}
+\item 
+\mbox{\Hypertarget{classdowi_1_1_func_button_a7eb3c8a9b831303119c6a06a3386e1f2}\label{classdowi_1_1_func_button_a7eb3c8a9b831303119c6a06a3386e1f2}} 
+std\+::string {\bfseries \+\_\+label}
+\item 
+\mbox{\Hypertarget{classdowi_1_1_func_button_abe80de3f1e9589a883c60451dff15a7c}\label{classdowi_1_1_func_button_abe80de3f1e9589a883c60451dff15a7c}} 
+bool {\bfseries \+\_\+pushed}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdowi_1_1_func_button_ae177b46f877358b17056a75e1d987ee4}\label{classdowi_1_1_func_button_ae177b46f877358b17056a75e1d987ee4}} 
+\index{dowi::FuncButton@{dowi::FuncButton}!show@{show}}
+\index{show@{show}!dowi::FuncButton@{dowi::FuncButton}}
+\doxysubsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily void Func\+Button\+::show (\begin{DoxyParamCaption}\item[{genv\+::canvas \&}]{c = {\ttfamily genv\+:\+:gout} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+visualize the widget 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & the genv\+::canvas type canvas to which you would like to draw the widget. The default gout is the standard graphical output. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+Do not use visualization in other function. Violation of this rule endanger the thread-\/safety. 
+\end{DoxyWarning}
+
+
+Implements \mbox{\hyperlink{classdowi_1_1_widget_a675d4ed2ad74bf50f944e80026e2eb8d}{dowi\+::\+Widget}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+funcbutton.\+hpp\item 
+funcbutton.\+cpp\end{DoxyCompactItemize}

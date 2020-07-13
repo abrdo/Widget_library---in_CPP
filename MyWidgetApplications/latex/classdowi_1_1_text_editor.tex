@@ -1,0 +1,54 @@
+\hypertarget{classdowi_1_1_text_editor}{}\doxysection{dowi\+::Text\+Editor Class Reference}
+\label{classdowi_1_1_text_editor}\index{dowi::TextEditor@{dowi::TextEditor}}
+Inheritance diagram for dowi\+::Text\+Editor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classdowi_1_1_text_editor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdowi_1_1_text_editor_ab3246585dac59f1d7efe2b3ff6ef82ae}\label{classdowi_1_1_text_editor_ab3246585dac59f1d7efe2b3ff6ef82ae}} 
+{\bfseries Text\+Editor} (int x, int y, int sx=140, int sy=25)
+\item 
+\mbox{\Hypertarget{classdowi_1_1_text_editor_a7092a60c8d4ea0b6f814d67517908723}\label{classdowi_1_1_text_editor_a7092a60c8d4ea0b6f814d67517908723}} 
+void {\bfseries handle} (genv\+::event ev) override
+\item 
+void \mbox{\hyperlink{classdowi_1_1_text_editor_ad68e493b7aa6e925229b708588835a10}{show}} (genv\+::canvas \&c=genv\+::gout) const override
+\begin{DoxyCompactList}\small\item\em visualize the widget \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdowi_1_1_text_editor_aef5b2db8c4f38fb657fe31f3797c9011}\label{classdowi_1_1_text_editor_aef5b2db8c4f38fb657fe31f3797c9011}} 
+std\+::string {\bfseries get\+\_\+text} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdowi_1_1_text_editor_ad68e493b7aa6e925229b708588835a10}\label{classdowi_1_1_text_editor_ad68e493b7aa6e925229b708588835a10}} 
+\index{dowi::TextEditor@{dowi::TextEditor}!show@{show}}
+\index{show@{show}!dowi::TextEditor@{dowi::TextEditor}}
+\doxysubsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily void Text\+Editor\+::show (\begin{DoxyParamCaption}\item[{genv\+::canvas \&}]{c = {\ttfamily genv\+:\+:gout} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+visualize the widget 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & the genv\+::canvas type canvas to which you would like to draw the widget. The default gout is the standard graphical output. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+Do not use visualization in other function. Violation of this rule endanger the thread-\/safety. 
+\end{DoxyWarning}
+
+
+Implements \mbox{\hyperlink{classdowi_1_1_widget_a675d4ed2ad74bf50f944e80026e2eb8d}{dowi\+::\+Widget}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+texteditor.\+hpp\item 
+texteditor.\+cpp\end{DoxyCompactItemize}

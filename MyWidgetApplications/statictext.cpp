@@ -1,6 +1,7 @@
 #include "statictext.hpp"
 using namespace std;
 using namespace genv;
+using namespace dowi;
 
 
 StaticText::StaticText(int x, int y, string text, unsigned char r, unsigned char g, unsigned char b,

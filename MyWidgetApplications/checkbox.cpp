@@ -2,6 +2,7 @@
 #include <iostream>
 using namespace std;
 using namespace genv;
+using namespace dowi;
 
 CheckBox::CheckBox(int x, int y, int sx, int sy) : Widget(x, y, sx, sy), _checked(false){}
 

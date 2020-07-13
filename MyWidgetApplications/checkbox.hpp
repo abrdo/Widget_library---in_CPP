@@ -3,6 +3,7 @@
 
 #include "widget.hpp"
 
+namespace dowi{
 
 class CheckBox : public Widget
 {
@@ -18,5 +19,7 @@ public:
 
 
 };
+
+} // namespace
 
 #endif // CHECKBOX_HPP

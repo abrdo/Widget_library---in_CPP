@@ -1,0 +1,81 @@
+\hypertarget{classdowi_1_1_number_editor}{}\doxysection{dowi\+::Number\+Editor Class Reference}
+\label{classdowi_1_1_number_editor}\index{dowi::NumberEditor@{dowi::NumberEditor}}
+Inheritance diagram for dowi\+::Number\+Editor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classdowi_1_1_number_editor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdowi_1_1_number_editor_a5f6e4fcf2dfd3b85a85d0bce8a9397ad}\label{classdowi_1_1_number_editor_a5f6e4fcf2dfd3b85a85d0bce8a9397ad}} 
+bool {\bfseries is\+\_\+in\+\_\+range} (int i)
+\item 
+\mbox{\Hypertarget{classdowi_1_1_number_editor_ad7a23bebe241f5143d447184d90a65ec}\label{classdowi_1_1_number_editor_ad7a23bebe241f5143d447184d90a65ec}} 
+{\bfseries Number\+Editor} (int x, int y, bool is\+\_\+bounded=false, int lower\+\_\+bound\+\_\+=-\/2147483638, int upper\+\_\+bound\+\_\+=2147483637, bool \+\_\+set\+\_\+to\+\_\+bound\+\_\+if\+\_\+out\+\_\+of\+\_\+range=false)
+\item 
+\mbox{\Hypertarget{classdowi_1_1_number_editor_a905bc5b5a0e049ce5c97e23e2f442137}\label{classdowi_1_1_number_editor_a905bc5b5a0e049ce5c97e23e2f442137}} 
+{\bfseries Number\+Editor} (int x, int y, int sx, int sy=25, bool is\+\_\+bounded=false, int lower\+\_\+bound\+\_\+=-\/2147483638, int upper\+\_\+bound\+\_\+=214748363, bool \+\_\+set\+\_\+to\+\_\+bound\+\_\+if\+\_\+out\+\_\+of\+\_\+range=false, int fontsize=14, int background\+\_\+r=-\/1, int background\+\_\+g=-\/1, int background\+\_\+b=-\/1)
+\item 
+\mbox{\Hypertarget{classdowi_1_1_number_editor_ae1cac144894a6b1481c070b67e21bc87}\label{classdowi_1_1_number_editor_ae1cac144894a6b1481c070b67e21bc87}} 
+void {\bfseries handle} (genv\+::event ev) override
+\item 
+void \mbox{\hyperlink{classdowi_1_1_number_editor_a3c6aa784339b66a0d984b427974fd1d3}{show}} (genv\+::canvas \&c=genv\+::gout) const override
+\begin{DoxyCompactList}\small\item\em visualize the widget \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdowi_1_1_number_editor_ad9e8a86cccf2853fb44c394f797b8683}\label{classdowi_1_1_number_editor_ad9e8a86cccf2853fb44c394f797b8683}} 
+void {\bfseries set\+\_\+number} (int num)
+\item 
+\mbox{\Hypertarget{classdowi_1_1_number_editor_af5a4ab38144634486d229b21d8074d18}\label{classdowi_1_1_number_editor_af5a4ab38144634486d229b21d8074d18}} 
+void {\bfseries set\+\_\+text} (std\+::string snum)
+\item 
+\mbox{\Hypertarget{classdowi_1_1_number_editor_a2dee4c041289699b0f17540a6a159b0a}\label{classdowi_1_1_number_editor_a2dee4c041289699b0f17540a6a159b0a}} 
+int {\bfseries get\+\_\+number} ()
+\item 
+\mbox{\Hypertarget{classdowi_1_1_number_editor_a8494ccd4758246d6a388b3775b331423}\label{classdowi_1_1_number_editor_a8494ccd4758246d6a388b3775b331423}} 
+std\+::string {\bfseries get\+\_\+text} ()
+\item 
+\mbox{\Hypertarget{classdowi_1_1_number_editor_aac97c561adc4e89dcb6cdbfcd0fc1966}\label{classdowi_1_1_number_editor_aac97c561adc4e89dcb6cdbfcd0fc1966}} 
+bool {\bfseries is\+\_\+empty} ()
+\item 
+\mbox{\Hypertarget{classdowi_1_1_number_editor_a638ebe9bcaf3e0fc5047014409ce1efc}\label{classdowi_1_1_number_editor_a638ebe9bcaf3e0fc5047014409ce1efc}} 
+void {\bfseries set\+\_\+possibility\+\_\+to\+\_\+type\+\_\+minus} (bool poss)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdowi_1_1_number_editor_ae18566a066af5b318d88bb76dc2cd0b5}\label{classdowi_1_1_number_editor_ae18566a066af5b318d88bb76dc2cd0b5}} 
+bool {\bfseries \+\_\+is\+\_\+bounded}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdowi_1_1_number_editor_a3c6aa784339b66a0d984b427974fd1d3}\label{classdowi_1_1_number_editor_a3c6aa784339b66a0d984b427974fd1d3}} 
+\index{dowi::NumberEditor@{dowi::NumberEditor}!show@{show}}
+\index{show@{show}!dowi::NumberEditor@{dowi::NumberEditor}}
+\doxysubsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily void Number\+Editor\+::show (\begin{DoxyParamCaption}\item[{genv\+::canvas \&}]{c = {\ttfamily genv\+:\+:gout} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+visualize the widget 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & the genv\+::canvas type canvas to which you would like to draw the widget. The default gout is the standard graphical output. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+Do not use visualization in other function. Violation of this rule endanger the thread-\/safety. 
+\end{DoxyWarning}
+
+
+Implements \mbox{\hyperlink{classdowi_1_1_widget_a675d4ed2ad74bf50f944e80026e2eb8d}{dowi\+::\+Widget}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+numbereditor.\+hpp\item 
+numbereditor.\+cpp\end{DoxyCompactItemize}

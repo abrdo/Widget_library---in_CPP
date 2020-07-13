@@ -4,6 +4,8 @@
 #include "widget.hpp"
 #include "statictextcomp.hpp"
 
+namespace dowi{
+
 class TextEditor : public Widget{
     std::string _text;
     bool _cursor_visible;
@@ -15,4 +17,5 @@ public:
     std::string get_text(){  return _text; }
 };
 
+} // namespace
 #endif // TEXTEDITOR_HPP

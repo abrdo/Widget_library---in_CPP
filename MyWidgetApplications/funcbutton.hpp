@@ -5,6 +5,8 @@
 
 #include <functional>
 
+namespace dowi{
+
 
 class FuncButton : public Widget {
 protected:
@@ -20,4 +22,5 @@ public:
 
 };
 
+} // namespace
 #endif // FUNCBUTTON_HPP_INCLUDED

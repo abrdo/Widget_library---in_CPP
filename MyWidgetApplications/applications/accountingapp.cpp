@@ -1,6 +1,7 @@
 #include "accountingapp.hpp"
 
 #include <iostream>
+using namespace dowi;
 
 AccountingApp::AccountingApp(int XX, int YY) : Window(XX,YY){
     _items = {};
@@ -28,6 +29,22 @@ AccountingApp::AccountingApp(int XX, int YY) : Window(XX,YY){
     _items.push_back(new item("magnum", -500));
     _items.push_back(new item("kaktus", -300));
     _items.push_back(new item("osztondij", 20000));
+    _items.push_back(new item("Boldogkovaralja-Bodvaszilas", -70));
+    _items.push_back(new item("magnum", -500));
+    _items.push_back(new item("kaktus", -300));
+    _items.push_back(new item("osztondij", 20000));
+    _items.push_back(new item("Boldogkovaralja-Bodvaszilas", -70));
+    _items.push_back(new item("magnum", -500));
+    _items.push_back(new item("kaktus", -300));
+    _items.push_back(new item("osztondij", 20000));
+    _items.push_back(new item("Boldogkovaralja-Bodvaszilas", -70));
+    _items.push_back(new item("magnum", -500));
+    _items.push_back(new item("kaktus", -300));
+    _items.push_back(new item("osztondij", 20000));
+    _items.push_back(new item("Boldogkovaralja-Bodvaszilas", -70));
+    _items.push_back(new item("magnum", -500));
+    _items.push_back(new item("kaktus", -300));
+    _items.push_back(new item("osztondij", 20000));
 
     update_widgets();
 }
@@ -46,7 +63,6 @@ void AccountingApp::undo(){
 
 void AccountingApp::delete_selected(){
     _selected_index = _itemsW->get_selected_index();
-    std::cout<<"del: "<<_selected_index<<std::endl;
     if(_selected_index == -1)
         return;
 

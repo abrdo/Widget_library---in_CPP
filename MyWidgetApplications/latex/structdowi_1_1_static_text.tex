@@ -1,0 +1,66 @@
+\hypertarget{structdowi_1_1_static_text}{}\doxysection{dowi\+::Static\+Text Struct Reference}
+\label{structdowi_1_1_static_text}\index{dowi::StaticText@{dowi::StaticText}}
+Inheritance diagram for dowi\+::Static\+Text\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structdowi_1_1_static_text}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structdowi_1_1_static_text_a87e8a47543acce167af2b0e94b16eaf6}\label{structdowi_1_1_static_text_a87e8a47543acce167af2b0e94b16eaf6}} 
+{\bfseries Static\+Text} (int x, int y, std\+::string text, unsigned char r=180, unsigned char g=180, unsigned char b=180, bool show\+\_\+frame=false, int size\+\_\+x=150, int size\+\_\+y=25, int fontsize=14, unsigned char frame\+\_\+r=210, unsigned char frame\+\_\+g=210, unsigned char frame\+\_\+b=210)
+\item 
+\mbox{\Hypertarget{structdowi_1_1_static_text_a89a07014090664f53931a7d4d6afac3b}\label{structdowi_1_1_static_text_a89a07014090664f53931a7d4d6afac3b}} 
+void {\bfseries set\+\_\+rgb} (unsigned r, unsigned g, unsigned b)
+\item 
+void \mbox{\hyperlink{structdowi_1_1_static_text_a453d628d8b9ee334aae8f173fa6e5386}{show}} (genv\+::canvas \&c=genv\+::gout) const override
+\begin{DoxyCompactList}\small\item\em visualize the widget \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structdowi_1_1_static_text_a50abc973a4f737e5eb20cb188e9188ec}\label{structdowi_1_1_static_text_a50abc973a4f737e5eb20cb188e9188ec}} 
+void {\bfseries handle} (genv\+::event ev) override
+\item 
+\mbox{\Hypertarget{structdowi_1_1_static_text_a51d83340197972b987abc73489086583}\label{structdowi_1_1_static_text_a51d83340197972b987abc73489086583}} 
+void {\bfseries set\+\_\+text} (std\+::string t)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structdowi_1_1_static_text_a7798ab8d8bcec0eca77fdd53f0277fb5}\label{structdowi_1_1_static_text_a7798ab8d8bcec0eca77fdd53f0277fb5}} 
+std\+::string {\bfseries \+\_\+text}
+\item 
+\mbox{\Hypertarget{structdowi_1_1_static_text_af257308eff01f1b9d9da1f3e4fb4d50b}\label{structdowi_1_1_static_text_af257308eff01f1b9d9da1f3e4fb4d50b}} 
+bool {\bfseries \+\_\+show\+\_\+frame}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structdowi_1_1_static_text_a453d628d8b9ee334aae8f173fa6e5386}\label{structdowi_1_1_static_text_a453d628d8b9ee334aae8f173fa6e5386}} 
+\index{dowi::StaticText@{dowi::StaticText}!show@{show}}
+\index{show@{show}!dowi::StaticText@{dowi::StaticText}}
+\doxysubsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily void Static\+Text\+::show (\begin{DoxyParamCaption}\item[{genv\+::canvas \&}]{c = {\ttfamily genv\+:\+:gout} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+visualize the widget 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & the genv\+::canvas type canvas to which you would like to draw the widget. The default gout is the standard graphical output. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+Do not use visualization in other function. Violation of this rule endanger the thread-\/safety. 
+\end{DoxyWarning}
+
+
+Implements \mbox{\hyperlink{classdowi_1_1_widget_a675d4ed2ad74bf50f944e80026e2eb8d}{dowi\+::\+Widget}}.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+statictext.\+hpp\item 
+statictext.\+cpp\end{DoxyCompactItemize}

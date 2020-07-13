@@ -3,6 +3,8 @@
 
 #include "widget.hpp"
 
+namespace dowi{
+
 class NumberEditor : public Widget{
     std::string _snum;
     const int _ubound, _lbound; // upper bound, lower bound
@@ -26,4 +28,5 @@ public:
 
 };
 
+} // namespace
 #endif // NUMBEREDITOR_HPP

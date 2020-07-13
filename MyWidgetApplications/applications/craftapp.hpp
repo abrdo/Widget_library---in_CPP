@@ -22,21 +22,21 @@ struct Epitoanyag{
     friend bool operator<(const Epitoanyag &a, const Epitoanyag &b){ return a.nev < b.nev; }
 };
 
-class CraftApp : public Window
+class CraftApp : public dowi::Window
 {
-    StaticText* raktar_text;
-    StaticText* kraftolhato_text;
-    StaticText* ujtargy_text;
+    dowi::StaticText* raktar_text;
+    dowi::StaticText* kraftolhato_text;
+    dowi::StaticText* ujtargy_text;
 
-    SelectorList* raktarL;
-    SelectorList* kraftolhatoL;
-    SelectorList* kellenekL;
+    dowi::SelectorList* raktarL;
+    dowi::SelectorList* kraftolhatoL;
+    dowi::SelectorList* kellenekL;
 
-    TextEditor* ujtargyE;
+    dowi::TextEditor* ujtargyE;
 
-    FuncButton* kraftolB;
-    FuncButton* kellB;
-    FuncButton* keszB;
+    dowi::FuncButton* kraftolB;
+    dowi::FuncButton* kellB;
+    dowi::FuncButton* keszB;
     //--------------------------------------------
     std::map<Epitoanyag, int> raktar;
 

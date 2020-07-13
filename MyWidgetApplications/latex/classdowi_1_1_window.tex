@@ -1,0 +1,65 @@
+\hypertarget{classdowi_1_1_window}{}\doxysection{dowi\+::Window Class Reference}
+\label{classdowi_1_1_window}\index{dowi::Window@{dowi::Window}}
+
+
+the application base class. Create applications via deriving from this class.  
+
+
+
+
+{\ttfamily \#include $<$window.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdowi_1_1_window_a674df770a57c725484f9bbfd0f38c307}\label{classdowi_1_1_window_a674df770a57c725484f9bbfd0f38c307}} 
+{\bfseries Window} (int window\+\_\+size\+\_\+x, int window\+\_\+size\+\_\+y)
+\item 
+\mbox{\Hypertarget{classdowi_1_1_window_a8a6676fb1dbab830e09559f1a38f34d7}\label{classdowi_1_1_window_a8a6676fb1dbab830e09559f1a38f34d7}} 
+void {\bfseries iterate\+\_\+focused\+\_\+by\+\_\+tab} (genv\+::event ev)
+\item 
+\mbox{\Hypertarget{classdowi_1_1_window_ab7889fdd6d815a177cad206fbc9167ea}\label{classdowi_1_1_window_ab7889fdd6d815a177cad206fbc9167ea}} 
+void {\bfseries handle\+\_\+\+\_\+iterate\+\_\+focused\+\_\+by\+\_\+tab\+\_\+\+\_\+show} (genv\+::event ev)
+\item 
+\mbox{\Hypertarget{classdowi_1_1_window_ae5f1fbcc8598e0010a4e64730ca6253f}\label{classdowi_1_1_window_ae5f1fbcc8598e0010a4e64730ca6253f}} 
+virtual void {\bfseries run} (int timer=40)
+\item 
+\mbox{\Hypertarget{classdowi_1_1_window_a0b954fd759c4a1b5084a22917d289298}\label{classdowi_1_1_window_a0b954fd759c4a1b5084a22917d289298}} 
+void {\bfseries shot\+\_\+down} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdowi_1_1_window_a243a9e55a6c8952e674f94dda9fc00c4}\label{classdowi_1_1_window_a243a9e55a6c8952e674f94dda9fc00c4}} 
+int {\bfseries \+\_\+\+XX}
+\item 
+\mbox{\Hypertarget{classdowi_1_1_window_af2c65ee91b55d10abc20daed82909c61}\label{classdowi_1_1_window_af2c65ee91b55d10abc20daed82909c61}} 
+int \mbox{\hyperlink{classdowi_1_1_window_af2c65ee91b55d10abc20daed82909c61}{\+\_\+\+YY}}
+\begin{DoxyCompactList}\small\item\em window size parameters \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdowi_1_1_window_ab323dc4387efba8288481a9843bc6dc8}\label{classdowi_1_1_window_ab323dc4387efba8288481a9843bc6dc8}} 
+unsigned char {\bfseries \+\_\+bgcol\+\_\+r}
+\item 
+\mbox{\Hypertarget{classdowi_1_1_window_a85db3009de90b3fb1ccc084bfd3535ac}\label{classdowi_1_1_window_a85db3009de90b3fb1ccc084bfd3535ac}} 
+unsigned char {\bfseries \+\_\+bgcol\+\_\+g}
+\item 
+\mbox{\Hypertarget{classdowi_1_1_window_a1fd2d305333539292d6a1b52c44a2a3f}\label{classdowi_1_1_window_a1fd2d305333539292d6a1b52c44a2a3f}} 
+unsigned char \mbox{\hyperlink{classdowi_1_1_window_a1fd2d305333539292d6a1b52c44a2a3f}{\+\_\+bgcol\+\_\+b}}
+\begin{DoxyCompactList}\small\item\em background color \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdowi_1_1_window_af7b677f563fd8a14ffddf6ead0e02ea9}\label{classdowi_1_1_window_af7b677f563fd8a14ffddf6ead0e02ea9}} 
+std\+::vector$<$ \mbox{\hyperlink{classdowi_1_1_widget}{Widget}} $\ast$ $>$ {\bfseries \+\_\+widgets}
+\item 
+\mbox{\Hypertarget{classdowi_1_1_window_af410f6401a22c2985eb968e6abeecfdf}\label{classdowi_1_1_window_af410f6401a22c2985eb968e6abeecfdf}} 
+int \mbox{\hyperlink{classdowi_1_1_window_af410f6401a22c2985eb968e6abeecfdf}{\+\_\+focused}}
+\begin{DoxyCompactList}\small\item\em index of focused widget \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdowi_1_1_window_aad8020749c5e36eebfdec8ae20196625}\label{classdowi_1_1_window_aad8020749c5e36eebfdec8ae20196625}} 
+bool {\bfseries \+\_\+exit}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+the application base class. Create applications via deriving from this class. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+window.\+hpp\item 
+window.\+cpp\end{DoxyCompactItemize}

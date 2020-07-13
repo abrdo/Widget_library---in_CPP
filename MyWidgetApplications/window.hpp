@@ -4,16 +4,20 @@
 #include "../widget.hpp"
 #include <vector>
 
+namespace dowi{
+
 class Widget;
 
-
+/**
+ *@brief the application base class. Create applications via deriving from this class.
+ */
 class Window
 {
 protected:
-    int _XX, _YY; // window size parameters
-    unsigned char _bgcol_r, _bgcol_g, _bgcol_b; //background color
+    int _XX, _YY; ///< window size parameters
+    unsigned char _bgcol_r, _bgcol_g, _bgcol_b; ///< background color
     std::vector<Widget*> _widgets;
-    int _focused; // index of focused widget;
+    int _focused; ///< index of focused widget
     bool _exit;
 public:
     Window(int window_size_x, int window_size_y);
@@ -27,4 +31,5 @@ public:
     void shot_down(){_exit = true;}
 };
 
+} // namespace
 #endif // WINDOW_HPP

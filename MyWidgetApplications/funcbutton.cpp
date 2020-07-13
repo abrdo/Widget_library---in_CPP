@@ -4,6 +4,7 @@
 
 using namespace std;
 using namespace genv;
+using namespace dowi;
 
 FuncButton::FuncButton(int x, int y, std::string label, std::function<void()> func, int sx, int sy)
                     : Widget(x,y,sx,sy), _f(func), _label(label), _pushed(false){

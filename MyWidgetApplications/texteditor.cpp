@@ -3,6 +3,7 @@
 #include <ctime>
 using namespace std;
 using namespace genv;
+using namespace dowi;
 
 TextEditor::TextEditor(int x, int y, int sx, int sy) : Widget(x,y,sx,sy), _text(""), _cursor_visible(true), _text_if_empty(x+3,_y+_size_y/2-_fonthight/2,"type here...", 90,90,90){}
 

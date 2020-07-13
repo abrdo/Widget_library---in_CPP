@@ -3,6 +3,7 @@
 #include <ctime>
 using namespace std;
 using namespace genv;
+using namespace dowi;
 
 NumberEditor::NumberEditor(int x, int y, bool p_isbounded, int lb, int ub, bool set2bound)
                 : Widget(x,y,0,25), _is_bounded(p_isbounded), _lbound(lb), _ubound(ub), _snum("0"), _set_to_bound(set2bound){

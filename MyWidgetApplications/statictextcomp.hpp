@@ -3,9 +3,10 @@
 
 #include "widget.hpp"
 
+namespace dowi{
+
 
 /// StaticText as a component for building into widgets it is more practical to use this static text than the original StaticText
-
 struct StaticTextComp : public Widget
 {
     std::string _text;
@@ -26,5 +27,6 @@ struct StaticTextComp : public Widget
     void set_size_y(int sy){_size_y = sy;}
 };
 
+} // namespace
 #endif // STATICTEXTCOMP_HPP
 

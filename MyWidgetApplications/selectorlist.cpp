@@ -1,10 +1,11 @@
 #include "selectorlist.hpp"
 #include <iostream>
 #include <vector>
-#include "statictext.hpp"
+#include <cmath>
 
 using namespace std;
 using namespace genv;
+using namespace dowi;
 
 SelectorList::SelectorList(int x, int y, int sx, int sy) : Widget(x,y,sx,sy){
     _items = {};
@@ -33,7 +34,7 @@ void SelectorList::delete_selected(){
         _items.erase(_items.begin()+_selected_index);
         _selected_index = -1;
     }
-    else cerr<<"warning: Can't delete, because there is no selection from the SelectorList."<<endl;
+    else cerr<<"warning: Can't delete, because there is no selection in SelectorList."<<endl;
 }
 
 void SelectorList::handle(event ev){
@@ -58,10 +59,17 @@ void SelectorList::handle(event ev){
         if(ev.button == btn_wheeldown)
             _scroll_shift+=4;
     }
-    if(_focused && ev.keycode== key_up && _selected_index != 0)
+    if(_focused && ev.keycode== key_up && _selected_index != 0 && _selected_index != -1){
         _selected_index--;
-    if(_focused && ev.keycode== key_down)
+        _scroll_shift = min(_scroll_shift, _items[_selected_index]->get_y()-3);
+        _scroll_shift = max(_scroll_shift, _items[_selected_index]->get_y()+_leading+3 - _size_y);
+    }
+    if(_focused && ev.keycode== key_down && _selected_index != -1){
         _selected_index++;
+        if(_selected_index > _items.size()-1) _selected_index =_items.size()-1;
+        _scroll_shift = min(_scroll_shift, _items[_selected_index]->get_y()-3);
+        _scroll_shift = max(_scroll_shift, _items[_selected_index]->get_y()+_leading+3 - _size_y);
+    }
 
     // _scroll_shift, _selected_index adjust, if it became invalid:
     if(_items.size()*_leading+10 < _size_y) // the length of the displayed list is shorter then the _size_y

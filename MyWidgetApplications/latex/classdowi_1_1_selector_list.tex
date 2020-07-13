@@ -1,0 +1,75 @@
+\hypertarget{classdowi_1_1_selector_list}{}\doxysection{dowi\+::Selector\+List Class Reference}
+\label{classdowi_1_1_selector_list}\index{dowi::SelectorList@{dowi::SelectorList}}
+Inheritance diagram for dowi\+::Selector\+List\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classdowi_1_1_selector_list}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdowi_1_1_selector_list_a08673393d06e4eabe7c9b5b6934ed2cc}\label{classdowi_1_1_selector_list_a08673393d06e4eabe7c9b5b6934ed2cc}} 
+{\bfseries Selector\+List} (int x, int y, int sx, int sy)
+\item 
+\mbox{\Hypertarget{classdowi_1_1_selector_list_a30035a040cb4bb4d2a8425e83316ae9f}\label{classdowi_1_1_selector_list_a30035a040cb4bb4d2a8425e83316ae9f}} 
+std\+::string {\bfseries get\+\_\+selected} ()
+\item 
+\mbox{\Hypertarget{classdowi_1_1_selector_list_a9bdda39020e48fd6626b0b107e1da880}\label{classdowi_1_1_selector_list_a9bdda39020e48fd6626b0b107e1da880}} 
+int {\bfseries get\+\_\+selected\+\_\+index} ()
+\item 
+\mbox{\Hypertarget{classdowi_1_1_selector_list_a6f0d4c784adb4f2b0a47c4ee11ccdc64}\label{classdowi_1_1_selector_list_a6f0d4c784adb4f2b0a47c4ee11ccdc64}} 
+void {\bfseries set\+\_\+selected\+\_\+index} (int index)
+\item 
+\mbox{\Hypertarget{classdowi_1_1_selector_list_a38175e97e9f4c511b3d750ad9d3c6a3b}\label{classdowi_1_1_selector_list_a38175e97e9f4c511b3d750ad9d3c6a3b}} 
+void {\bfseries new\+\_\+item} (std\+::string itemtext)
+\item 
+\mbox{\Hypertarget{classdowi_1_1_selector_list_a34eb39ecfdc343be0a42a77601531032}\label{classdowi_1_1_selector_list_a34eb39ecfdc343be0a42a77601531032}} 
+void {\bfseries delete\+\_\+selected} ()
+\item 
+\mbox{\Hypertarget{classdowi_1_1_selector_list_ab71ac2f8a78efb35db71d6fce7705d51}\label{classdowi_1_1_selector_list_ab71ac2f8a78efb35db71d6fce7705d51}} 
+void {\bfseries clear} ()
+\item 
+\mbox{\Hypertarget{classdowi_1_1_selector_list_a2c193d4d3976917879c73ac4bb0e8e04}\label{classdowi_1_1_selector_list_a2c193d4d3976917879c73ac4bb0e8e04}} 
+void {\bfseries handle} (genv\+::event ev) override
+\item 
+void \mbox{\hyperlink{classdowi_1_1_selector_list_a45b05a60ffe9caecf09ea4493cb23e2b}{show}} (genv\+::canvas \&c=genv\+::gout) const override
+\begin{DoxyCompactList}\small\item\em visualize the widget \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdowi_1_1_selector_list_a617273d4acdd1fdab4e5a4cfb00beaed}\label{classdowi_1_1_selector_list_a617273d4acdd1fdab4e5a4cfb00beaed}} 
+bool {\bfseries selection} ()
+\item 
+\mbox{\Hypertarget{classdowi_1_1_selector_list_a61ce0305dc515c4c1c7baf8b4f4d22a8}\label{classdowi_1_1_selector_list_a61ce0305dc515c4c1c7baf8b4f4d22a8}} 
+int {\bfseries disp\+\_\+items\+\_\+size} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdowi_1_1_selector_list_a45b05a60ffe9caecf09ea4493cb23e2b}\label{classdowi_1_1_selector_list_a45b05a60ffe9caecf09ea4493cb23e2b}} 
+\index{dowi::SelectorList@{dowi::SelectorList}!show@{show}}
+\index{show@{show}!dowi::SelectorList@{dowi::SelectorList}}
+\doxysubsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily void Selector\+List\+::show (\begin{DoxyParamCaption}\item[{genv\+::canvas \&}]{c = {\ttfamily genv\+:\+:gout} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+visualize the widget 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & the genv\+::canvas type canvas to which you would like to draw the widget. The default gout is the standard graphical output. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+Do not use visualization in other function. Violation of this rule endanger the thread-\/safety. 
+\end{DoxyWarning}
+
+
+Implements \mbox{\hyperlink{classdowi_1_1_widget_a675d4ed2ad74bf50f944e80026e2eb8d}{dowi\+::\+Widget}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+selectorlist.\+hpp\item 
+selectorlist.\+cpp\end{DoxyCompactItemize}

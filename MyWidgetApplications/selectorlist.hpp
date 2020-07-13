@@ -5,7 +5,7 @@
 #include "statictextcomp.hpp"
 #include <vector>
 
-
+namespace dowi{
 
 class SelectorList : public Widget{
     std::vector<StaticTextComp*> _items;
@@ -34,4 +34,5 @@ public:
     int disp_items_size(){return _items.size()*_leading;} // items-canvas y-length
 };
 
+} // namespace
 #endif // SELECTORLIST_HPP

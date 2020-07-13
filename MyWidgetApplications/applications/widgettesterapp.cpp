@@ -1,6 +1,7 @@
 #include "widgettesterapp.hpp"
 using namespace genv;
 using namespace std;
+using namespace dowi;
 
 
 WidgetTesterApp::WidgetTesterApp(int XX, int YY) : Window(XX,YY){

@@ -3,6 +3,7 @@
 #include <iostream>
 using namespace genv;
 using namespace std;
+using namespace dowi;
 
 CraftApp::CraftApp(int XX, int YY) : Window(XX,YY){
         raktar_text = new StaticText(10, 25,"Raktar:");

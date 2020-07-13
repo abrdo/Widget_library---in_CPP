@@ -11,7 +11,7 @@
 
 enum Operation {null, ADD, SUBSTRACT, MULTIPLY, DIVIDE, EQUALS};
 
-class Calculator : public Window
+class Calculator : public dowi::Window
 {
    // Model ----
     int _op1, _op2; //op2 - current operand under editing; op1 - previous operand
@@ -24,24 +24,24 @@ class Calculator : public Window
 
    // View ----
     // display
-    StaticText* _op1W;
-    NumberEditor* _op2W;
-    StaticText* _operW;
+    dowi::StaticText* _op1W;
+    dowi::NumberEditor* _op2W;
+    dowi::StaticText* _operW;
 
     // buttons
-    FuncButton* _numberWs[10];
+    dowi::FuncButton* _numberWs[10];
 
-    FuncButton* _signW;
+    dowi::FuncButton* _signW;
 
-    FuncButton* _addW;
-    FuncButton* _substractW;
-    FuncButton* _multiplyW;
-    FuncButton* _divideW;
-    FuncButton* _equalsW;
+    dowi::FuncButton* _addW;
+    dowi::FuncButton* _substractW;
+    dowi::FuncButton* _multiplyW;
+    dowi::FuncButton* _divideW;
+    dowi::FuncButton* _equalsW;
 
-    FuncButton* _backspaceW;
-    FuncButton* _undoW;
-    FuncButton* _newW;
+    dowi::FuncButton* _backspaceW;
+    dowi::FuncButton* _undoW;
+    dowi::FuncButton* _newW;
 
 
 

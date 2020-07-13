@@ -6,25 +6,31 @@
 #include <sstream>
 #include <map>
 
+namespace dowi{
+
 class Window;
 
 
+/**
+ *@brief the Widget base class
+ */
 class Widget{
 protected:
-    int _x, _y, _size_x, _size_y;
-    Window* _window; // the window what contains this widget. (not necessary to provide with value to use a widget properly)
+    int _x, _y; ///< the x, y coordinates of the top-left corner of the widget
+    int _size_x, _size_y; ///< the width (_size_x) and the hight (_size_y) of the widget
+    Window* _window; ///< the window what contains this widget. (not necessary to provide with value to use a widget properly)
 
-    bool _focused;
-    bool _focusable;
-    bool _targeted;
+    bool _focused; ///< is the widget in focus
+    bool _focusable; ///< is the widget focusable
+    bool _targeted; ///< It is true if the widget is focusable and the mouse is over it.
 
-    int _fonthight;
-    std::string __fontfile;
-    int __fontsize;
+    int _fonthight; ///< the fonhight of the fonts used by the widget (if it uses fonts by the visualization)
+    std::string __fontfile; ///< The name of the fontfile from witch the fonts readed. It must exist in the project folder with '.ttf' extension
+    int __fontsize; ///< The fontsize of the visualized text. (the __fontfile must support this fontsize)
 
-    unsigned char _r, _g, _b;
-    unsigned char _bgcol_r, _bgcol_g, _bgcol_b; //backgroundcolor
-    unsigned char _frame_r, _frame_g, _frame_b;
+    unsigned char _r, _g, _b; ///< the RGB color values of the widget. The meaning of color - if exists at all - is various by the different widgets.
+    unsigned char _bgcol_r, _bgcol_g, _bgcol_b; ///< the base background-color of the widget
+    unsigned char _frame_r, _frame_g, _frame_b; ///< the color of the frame of the widget
 
 public:
     Widget(){}
@@ -42,7 +48,11 @@ public:
 
     bool mouse_above(genv::event ev) const;
     virtual void handle(genv::event ev) = 0;
-
+    /**
+     *@brief visualize the widget
+     *@param c the genv::canvas type canvas to which you would like to draw the widget. The default gout is the standard graphical output.
+     *@warning Do not use visualization in other function. Violation of this rule endanger the thread-safety.
+     */
     virtual void show(genv::canvas &c = genv::gout) const = 0;
     void show_frame(genv::canvas &c = genv::gout) const;
 
@@ -124,4 +134,5 @@ public:
 */
 };
 
+} // namespace
 #endif // WIDGET_HPP

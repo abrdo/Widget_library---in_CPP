@@ -3,6 +3,7 @@
 #include <math.h>
 
 using namespace genv;
+using namespace dowi;
 
 Calculator::Calculator(int XX, int YY) : Window(XX,YY){
     // MODEL ----

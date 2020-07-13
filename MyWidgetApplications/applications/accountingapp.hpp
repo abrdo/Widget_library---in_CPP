@@ -19,19 +19,19 @@ struct item{
 
 
 
-class AccountingApp : public Window{
+class AccountingApp : public dowi::Window{
 
     std::vector<item*> _items;
     int _selected_index;
 
-    TextEditor* _nameW;
-    NumberEditor* _moneyW;
-    FuncButton* _add_to_listW;
-    SelectorList* _itemsW;
-    StaticText* _balanceW;
-    FuncButton* _undoW;
-    FuncButton* _deleteW;
-    FuncButton* _modifyW;
+    dowi::TextEditor* _nameW;
+    dowi::NumberEditor* _moneyW;
+    dowi::FuncButton* _add_to_listW;
+    dowi::SelectorList* _itemsW;
+    dowi::StaticText* _balanceW;
+    dowi::FuncButton* _undoW;
+    dowi::FuncButton* _deleteW;
+    dowi::FuncButton* _modifyW;
 
 public:
     AccountingApp(int XX = 400, int YY = 400);

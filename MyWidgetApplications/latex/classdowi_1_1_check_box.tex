@@ -1,0 +1,60 @@
+\hypertarget{classdowi_1_1_check_box}{}\doxysection{dowi\+::Check\+Box Class Reference}
+\label{classdowi_1_1_check_box}\index{dowi::CheckBox@{dowi::CheckBox}}
+Inheritance diagram for dowi\+::Check\+Box\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classdowi_1_1_check_box}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdowi_1_1_check_box_aac2ae9a0c31d0064c68383e7ad6c0d55}\label{classdowi_1_1_check_box_aac2ae9a0c31d0064c68383e7ad6c0d55}} 
+{\bfseries Check\+Box} (int x, int y, int sx=25, int sy=25)
+\item 
+\mbox{\Hypertarget{classdowi_1_1_check_box_a3b9e7d4d2f219dea4773c8f20c1c9f28}\label{classdowi_1_1_check_box_a3b9e7d4d2f219dea4773c8f20c1c9f28}} 
+void {\bfseries set\+\_\+checked} (bool ch)
+\item 
+\mbox{\Hypertarget{classdowi_1_1_check_box_a7fb72f041035e5c28ac7acea3643244e}\label{classdowi_1_1_check_box_a7fb72f041035e5c28ac7acea3643244e}} 
+bool {\bfseries is\+\_\+checked} ()
+\item 
+\mbox{\Hypertarget{classdowi_1_1_check_box_a321dc7e50bd66ea3b43daf849c75d68b}\label{classdowi_1_1_check_box_a321dc7e50bd66ea3b43daf849c75d68b}} 
+void {\bfseries toggle} ()
+\item 
+\mbox{\Hypertarget{classdowi_1_1_check_box_a1c3dea2b74b663747ae7d609d35ff834}\label{classdowi_1_1_check_box_a1c3dea2b74b663747ae7d609d35ff834}} 
+void {\bfseries handle} (genv\+::event ev) override
+\item 
+void \mbox{\hyperlink{classdowi_1_1_check_box_ad09193ca039e2579bab1e58eb38d09b9}{show}} (genv\+::canvas \&c=genv\+::gout) const override
+\begin{DoxyCompactList}\small\item\em visualize the widget \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdowi_1_1_check_box_ad09193ca039e2579bab1e58eb38d09b9}\label{classdowi_1_1_check_box_ad09193ca039e2579bab1e58eb38d09b9}} 
+\index{dowi::CheckBox@{dowi::CheckBox}!show@{show}}
+\index{show@{show}!dowi::CheckBox@{dowi::CheckBox}}
+\doxysubsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily void Check\+Box\+::show (\begin{DoxyParamCaption}\item[{genv\+::canvas \&}]{c = {\ttfamily genv\+:\+:gout} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+visualize the widget 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & the genv\+::canvas type canvas to which you would like to draw the widget. The default gout is the standard graphical output. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+Do not use visualization in other function. Violation of this rule endanger the thread-\/safety. 
+\end{DoxyWarning}
+
+
+Implements \mbox{\hyperlink{classdowi_1_1_widget_a675d4ed2ad74bf50f944e80026e2eb8d}{dowi\+::\+Widget}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+checkbox.\+hpp\item 
+checkbox.\+cpp\end{DoxyCompactItemize}
