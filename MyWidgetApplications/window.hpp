@@ -9,7 +9,10 @@ namespace dowi{
 class Widget;
 
 /**
- *@brief the application base class. Create applications via deriving from this class.
+ *@brief The application base class.
+ */
+/**
+ * Create applications via deriving from this class.
  */
 class Window
 {
@@ -24,7 +27,9 @@ public:
     virtual ~Window();
 
     void iterate_focused_by_tab(genv::event ev);
-    void handle__iterate_focused_by_tab__show(genv::event ev);
+    void handle__iterate_focused_by_tab__show(genv::event ev); ////////////// TODO: delete
+    void refresh();
+    virtual void update();
 
     virtual void run(int timer = 40);
 

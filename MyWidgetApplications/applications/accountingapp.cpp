@@ -46,19 +46,19 @@ AccountingApp::AccountingApp(int XX, int YY) : Window(XX,YY){
     _items.push_back(new item("kaktus", -300));
     _items.push_back(new item("osztondij", 20000));
 
-    update_widgets();
+    update();
 }
 
 
 void AccountingApp::add_to_list(std::string pname, int pmoney){
     _items.push_back(new item(pname, pmoney));
-    update_widgets();
+    update();
 }
 
 void AccountingApp::undo(){
     if(!_items.empty())
         _items.pop_back();
-    update_widgets();
+    update();
 }
 
 void AccountingApp::delete_selected(){
@@ -70,7 +70,7 @@ void AccountingApp::delete_selected(){
     //_selected_index = -1;
     if (_selected_index == _items.size()) _selected_index = _items.size()-1;
 
-    update_widgets();
+    update();
 }
 
 void AccountingApp::modify_selected_to(std::string pname, int pmoney){
@@ -78,11 +78,11 @@ void AccountingApp::modify_selected_to(std::string pname, int pmoney){
     if(_selected_index == -1)
         return;
     *_items[_selected_index] = item(pname, pmoney);
-    update_widgets();
+    update();
 }
 
 /////////////  UPDATE  /////////////////////
-void AccountingApp::update_widgets(){
+void AccountingApp::update(){
     _itemsW->clear();
     int sum = 0;
     for(item *i : _items){
@@ -92,6 +92,8 @@ void AccountingApp::update_widgets(){
     }
     _itemsW->set_selected_index(_selected_index);
     _balanceW->set_text("Balance: " + Widget::to_str(sum));
+
+    refresh();
 
     /*
     TODO(optional):  -- tldr: if ma widget modified -> update model

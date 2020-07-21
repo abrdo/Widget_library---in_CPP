@@ -47,23 +47,43 @@ void Window::handle__iterate_focused_by_tab__show(genv::event ev){
     }
 
     iterate_focused_by_tab(ev);
-
+    /*
     if(ev.type == ev_timer){
         gout<<color(_bgcol_r, _bgcol_g, _bgcol_b)<<move_to(0,0)<<box(_XX,_YY);
         for(auto w : _widgets)
             w->show();
-        gout<<refresh;
+        gout<<genv::refresh;
     }
+    */
+
 };
 
+void Window::refresh(){
+    gout<<color(_bgcol_r, _bgcol_g, _bgcol_b)<<move_to(0,0)<<box(_XX,_YY);
+    for(auto w : _widgets)
+        w->show();
+    gout<<genv::refresh;
+}
+
+void Window::update(){
+    refresh();
+}
 
 
 void Window::run(int timer){
     gout.open(_XX, _YY);
+    refresh();
     gin.timer(timer);
     event ev;
     while(gin >> ev && !_exit){
         handle__iterate_focused_by_tab__show(ev);
+
+        if(ev.type == ev_timer){
+            //TODO: virtual update model from widgets; ------------------------------------- (calculatornal is átirhato;
+            update();
+            //if(_widgets != prev_widgets) {update(); cout<<1;}
+        }
+
         if(ev.keycode == key_escape)
             _exit = true;
     }

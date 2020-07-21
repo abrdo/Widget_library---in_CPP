@@ -42,7 +42,7 @@ public:
     void delete_selected();
     void modify_selected_to(std::string name, int money);
 
-    void update_widgets();
+    void update();
 };
 
 #endif // ACCOUNTINGAPP_HPP

@@ -257,13 +257,16 @@ void Calculator::run(int timer){
             if(!there_is_a_focused_button){
                 operation_pushed(Operation::EQUALS);
                 for(Widget* w : _widgets) w->set_focused(false);
-                ev.keycode = '�'; //any key but not enter or space
+                ev.keycode = 'ß'; //any key but not enter or space
                 _newW->set_focused(true);
-
             }
         }
         //----------------------------------------------------------
         handle__iterate_focused_by_tab__show(ev);
+        if(ev.type == ev_timer){
+            refresh(); //update() kéne legyen, de úgy nem működne a szambeallitas billentyuzettel
+            //if(_widgets != prev_widgets) {refresh(); cout<<1;}
+        }
         if(ev.keycode == key_escape)
             _exit = true;
     }
