@@ -33,7 +33,7 @@ Calculator::Calculator(int XX, int YY) : Window(XX,YY){
         _numberWs[i] = new FuncButton(25+(i-1)%3*50, 125+(i-1)/3*50, Widget::to_str(i), [=](){this->number_pushed(i);}, 50,50);
         _widgets.push_back(_numberWs[i]);
     }
-    _signW = new FuncButton(25, 125+3*50, "+/-", [&](){_op2 = _op2W->get_number(); _op2_is_empty = _op2W->is_empty(); _op2 = -_op2; update();}, 50,50);
+    _signW = new FuncButton(25, 125+3*50, "+/-", [&](){_op2 = _op2W->get_number(); _op2_is_empty = _op2W->is_empty(); _op2 = -_op2; update_widgets();}, 50,50);
     _widgets.push_back(_signW);
     _numberWs[0] = new FuncButton(25+1*50, 125+3*50, "0", [=](){this->number_pushed(0);}, 50,50);
     _widgets.push_back(_numberWs[0]);
@@ -68,7 +68,7 @@ void Calculator::undo(){
     _op2 = 0;
     _oper = null;
     _error_message = "";
-    update();
+    update_widgets();
 }
 
 void Calculator::pop(){
@@ -77,7 +77,7 @@ void Calculator::pop(){
     _op2 /= 10;
     if(_op2==0)
         _op2_is_empty = true;
-        update();
+        update_widgets();
 }
 
 void Calculator::reset(){
@@ -87,11 +87,11 @@ void Calculator::reset(){
     _error_message = "";
     _history_op1.clear();
     _op2_is_empty = true;
-    update();
+    update_widgets();
     _op2W->set_focused(true);
 }
 
-void Calculator::update(){
+void Calculator::update_widgets(){
     _newW->set_frame_color(_default_button_frame_color['r'], _default_button_frame_color['g'], _default_button_frame_color['b']);
     // if error
     if(_error_message!=""){
@@ -159,7 +159,7 @@ void Calculator::number_pushed(int n){
         _op2 = 10*_op2 - n;
 
     _op2_is_empty = false;
-    update();
+    update_widgets();
 }
 
 void Calculator::operation_pushed(Operation new_op){
@@ -212,7 +212,7 @@ void Calculator::operation_pushed(Operation new_op){
         _op2 = _op1;
         _op2_is_empty = false;
     }
-    update();
+    update_widgets();
     if(_oper == EQUALS){
         _op2 = 0;
         _op2_is_empty = true;
@@ -257,15 +257,15 @@ void Calculator::run(int timer){
             if(!there_is_a_focused_button){
                 operation_pushed(Operation::EQUALS);
                 for(Widget* w : _widgets) w->set_focused(false);
-                ev.keycode = 'ß'; //any key but not enter or space
+                ev.keycode = '�'; //any key but not enter or space
                 _newW->set_focused(true);
             }
         }
         //----------------------------------------------------------
-        handle__iterate_focused_by_tab__show(ev);
+        iterate_focused_by_tab(ev);
+        handle_widgets(ev);
         if(ev.type == ev_timer){
-            refresh(); //update() kéne legyen, de úgy nem működne a szambeallitas billentyuzettel
-            //if(_widgets != prev_widgets) {refresh(); cout<<1;}
+            refresh();
         }
         if(ev.keycode == key_escape)
             _exit = true;

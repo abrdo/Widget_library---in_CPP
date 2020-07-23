@@ -28,8 +28,10 @@ public:
 
     void iterate_focused_by_tab(genv::event ev);
     void handle__iterate_focused_by_tab__show(genv::event ev); ////////////// TODO: delete
-    void refresh();
-    virtual void update();
+    void handle_widgets(genv::event ev);
+    //virtual void update_model(){} ///< updates model from widgets
+    virtual void update_widgets(){}; ///< updates widgets from model
+    void refresh(); ///< redraw the most current widgets
 
     virtual void run(int timer = 40);
 

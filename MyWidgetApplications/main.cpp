@@ -10,6 +10,8 @@ using namespace dowi;
 
 
 int main(){
+    AccountingApp myapp2;
+    myapp2.run();
     PuttingApp myapp;
     myapp.run();
 
@@ -17,8 +19,6 @@ int main(){
     myapp0.run();
     Calculator myapp1;
     myapp1.run();
-    AccountingApp myapp2;
-    myapp2.run();
 
     return 0;
 }

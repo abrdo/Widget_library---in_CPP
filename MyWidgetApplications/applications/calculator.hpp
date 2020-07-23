@@ -51,7 +51,7 @@ public:
     void pop();
     void undo();
     void reset();
-    void update() override;
+    void update_widgets() override;
     void number_pushed(int number);
     void operation_pushed(Operation op);
     void run(int timer = 40) override;
