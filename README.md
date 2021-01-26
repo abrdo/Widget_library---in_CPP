@@ -13,4 +13,5 @@ Widgets hpp and cpp files:
 
 ## Refs:
 I used the following graphic lib for build my widgets made by my professor Gergely Feldhoffer PhD. http://users.itk.ppke.hu/~flugi/grafikuslib/graphics.html
-I developed in CodeBlocks open source IDE. http://www.codeblocks.org/
+I developed in CodeBlocks open source IDE.  http://www.codeblocks.org/
+
