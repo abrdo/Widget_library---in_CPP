@@ -5,13 +5,13 @@ You can find a doxygen documentation for the lib here: http://users.itk.ppke.hu/
 
 ## Content:
 Widgets hpp and cpp files:
-- statictext
-- one row testeditor
+- static text
+- dynamic text (editor)
 - number editor
 - selector list
 - function button
 
 ## Refs:
-I used the following graphic lib for build my widgets made by my professor Gergely Feldhoffer PhD. http://users.itk.ppke.hu/~flugi/grafikuslib/graphics.html
+I used the following graphic lib for visualize my widgets developed by my professor Gergely Feldhoffer, PhD. http://users.itk.ppke.hu/~flugi/grafikuslib/graphics.html
 I developed in CodeBlocks open source IDE.  http://www.codeblocks.org/
 
